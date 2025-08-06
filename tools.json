@@ -1,62 +1,51 @@
 [
   {
     "name": "ChatGPT",
-    "description": "A powerful AI chatbot that can generate text and answer questions.",
+    "description": "An advanced AI chatbot developed by OpenAI.",
     "link": "https://chat.openai.com",
-    "category": "Chatbot"
+    "category": "AI Chatbot",
+    "tags": ["chatbot", "AI", "OpenAI", "text"]
   },
   {
-    "name": "Midjourney",
-    "description": "An AI image generator that creates art from text prompts.",
-    "link": "https://www.midjourney.com",
-    "category": "Image Generator"
+    "name": "Canva",
+    "description": "Design anything from logos to videos with ease.",
+    "link": "https://www.canva.com",
+    "category": "Design",
+    "tags": ["design", "graphics", "logo", "video"]
   },
   {
-    "name": "Leonardo AI",
-    "description": "AI image generation platform with styles and presets.",
-    "link": "https://leonardo.ai",
-    "category": "Image Generator"
-  },
-  {
-    "name": "Runway",
-    "description": "Text-to-video AI tool for creators and filmmakers.",
-    "link": "https://runwayml.com",
-    "category": "Video Generator"
+    "name": "Remove.bg",
+    "description": "Remove background from any image automatically.",
+    "link": "https://www.remove.bg",
+    "category": "Image Editing",
+    "tags": ["image", "background", "AI", "edit"]
   },
   {
     "name": "Copy.ai",
-    "description": "AI copywriting assistant for blog posts, ads, and more.",
-    "link": "https://copy.ai",
-    "category": "Writing"
+    "description": "Generate marketing copy using AI.",
+    "link": "https://www.copy.ai",
+    "category": "Content Writing",
+    "tags": ["writing", "AI", "copy", "marketing"]
   },
   {
-    "name": "Synthesia",
-    "description": "Create AI videos with avatars from text scripts.",
-    "link": "https://www.synthesia.io",
-    "category": "Video Generator"
+    "name": "Krisp",
+    "description": "Remove background noise in real-time during calls.",
+    "link": "https://krisp.ai",
+    "category": "Productivity",
+    "tags": ["audio", "call", "noise", "remote"]
   },
   {
-    "name": "Tome",
-    "description": "AI tool for generating presentation slides.",
-    "link": "https://tome.app",
-    "category": "Presentation"
+    "name": "Runway ML",
+    "description": "AI tools for video, image, and creative workflows.",
+    "link": "https://runwayml.com",
+    "category": "Video Editing",
+    "tags": ["AI", "video", "generation", "creative"]
   },
   {
-    "name": "Jasper",
-    "description": "AI writing assistant for marketing and content creation.",
-    "link": "https://www.jasper.ai",
-    "category": "Writing"
-  },
-  {
-    "name": "Pictory",
-    "description": "Create videos automatically from blog posts or articles.",
-    "link": "https://pictory.ai",
-    "category": "Video Generator"
-  },
-  {
-    "name": "Magical",
-    "description": "AI tool to automate repetitive tasks in your browser.",
-    "link": "https://www.getmagical.com",
-    "category": "Productivity"
+    "name": "Notion AI",
+    "description": "AI integrated into Notion for productivity and writing.",
+    "link": "https://www.notion.so/product/ai",
+    "category": "Productivity",
+    "tags": ["notes", "writing", "tasks", "ai"]
   }
 ]
