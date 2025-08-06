@@ -10,15 +10,21 @@
 </head>
 <body>
 
+  <!-- Dark Mode Toggle -->
+  <button id="toggle-theme" title="Switch theme">🌙</button>
+
   <!-- Header Section -->
   <header class="header">
     <div class="container">
       <h1>🚀 ToolVerse <span>AI</span></h1>
-      <p class="subtitle">Discover 100+ handpicked AI tools for everything from writing to video generation.</p>
+      <p class="subtitle" data-i18n="subtitle">Discover 100+ handpicked AI tools for everything from writing to video generation.</p>
+
       <div class="search-container">
         <input type="text" id="searchInput" placeholder="🔍 Search AI tools..." />
-        <select id="categoryFilter">
-          <option value="all">All Categories</option>
+        <select id="categoryFilter"></select>
+        <select id="languageSwitcher">
+          <option value="en">English</option>
+          <option value="hi">हिंदी</option>
         </select>
       </div>
     </div>
@@ -28,17 +34,42 @@
   <main class="main">
     <div class="container">
       <div id="tool-list" class="tool-grid">
-        <!-- AI Tools will be inserted here via JavaScript -->
+        <!-- Tools inserted here -->
       </div>
     </div>
   </main>
+
+  <!-- Export/Share -->
+  <div class="export-share">
+    <button id="copyTools">📋 Copy</button>
+    <button id="downloadTools">⬇️ Download</button>
+    <button id="shareTools">🔗 Share</button>
+  </div>
+
+  <!-- Submit Tool Form -->
+  <section class="submit-tool">
+    <h2>Add Your AI Tool</h2>
+    <form id="toolForm">
+      <input type="text" id="toolName" placeholder="Tool Name" required />
+      <input type="text" id="toolDescription" placeholder="Description" required />
+      <input type="url" id="toolLink" placeholder="Tool URL" required />
+      <input type="text" id="toolCategory" placeholder="Category" required />
+      <input type="text" id="toolTags" placeholder="Tags (comma-separated)" />
+      <button type="submit">Submit Tool</button>
+    </form>
+  </section>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <p>&copy; 2025 ToolVerse AI • Built for AI explorers by <strong>You</strong></p>
+      <!-- Ad Slot -->
+      <div class="ad-slot">Your Ad Here</div>
     </div>
   </footer>
+
+  <!-- Scroll To Top -->
+  <button id="scrollToTopBtn" title="Scroll to top">⬆️</button>
 
   <!-- JavaScript -->
   <script src="script.js"></script>
