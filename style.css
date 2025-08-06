@@ -1,41 +1,31 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f2f5;
-  color: #333;
-  margin: 0;
-  padding: 0;
+/* Theme Toggle Button */
+#theme-toggle {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  background: #ddd;
+  border: none;
+  padding: 0.5em 1em;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
 }
-header {
-  background-color: #282c34;
-  color: white;
-  padding: 1em;
-  text-align: center;
+
+/* Dark Theme */
+body.dark {
+  background-color: #121212;
+  color: #fff;
 }
-#search {
-  margin-top: 1em;
-  padding: 0.5em;
-  width: 80%;
-  max-width: 400px;
+
+body.dark .tool-card {
+  background-color: #1e1e1e;
+  border-color: #333;
 }
-main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 2em;
+
+body.dark header {
+  background-color: #1a1a1a;
 }
-.tool-card {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  margin: 1em;
-  padding: 1em;
-  width: 300px;
-}
-.tool-card h3 {
-  margin-top: 0;
-}
-footer {
-  text-align: center;
-  padding: 1em;
-  background-color: #ddd;
+
+body.dark a {
+  color: #00bfff;
 }
