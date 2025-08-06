@@ -5,25 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ToolVerse AI - Explore 100+ AI Tools</title>
   <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4712/4712100.png" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
 </head>
 <body>
   <header class="header">
     <div class="container">
-      <div class="header-top">
-        <h1>🚀 ToolVerse <span>AI</span></h1>
-        <button id="themeToggle" title="Toggle Dark/Light">🌓</button>
-      </div>
-      <p class="subtitle">Discover 100+ handpicked AI tools for everything from writing to video generation.</p>
+      <h1>🚀 ToolVerse <span>AI</span></h1>
+      <p class="subtitle">Explore 100+ verified AI tools to supercharge your productivity!</p>
       <div class="search-container">
         <input type="text" id="searchInput" placeholder="🔍 Search AI tools..." />
         <select id="categoryFilter">
           <option value="all">All Categories</option>
-        </select>
-        <select id="languageSelect">
-          <option value="en">🌐 English</option>
-          <option value="hi">🇮🇳 Hindi</option>
-          <option value="es">🇪🇸 Spanish</option>
         </select>
       </div>
     </div>
@@ -31,25 +24,15 @@
 
   <main class="main">
     <div class="container">
-      <div id="tool-list" class="tool-grid"></div>
-      <div id="pagination" class="pagination-controls"></div>
+      <div id="tool-list" class="tool-grid">
+        <!-- Tools will be dynamically injected here -->
+      </div>
     </div>
   </main>
 
-  <div id="toolModal" class="modal hidden">
-    <div class="modal-content">
-      <span class="close-button" id="closeModal">×</span>
-      <h2 id="modalTitle">Tool Name</h2>
-      <p id="modalDescription">Tool Description</p>
-      <p><strong>Category:</strong> <span id="modalCategory"></span></p>
-      <p><strong>Tags:</strong> <span id="modalTags"></span></p>
-      <a id="modalVisit" href="#" target="_blank">🔗 Visit Tool</a>
-    </div>
-  </div>
-
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2025 ToolVerse AI • Built for AI explorers by <strong>You</strong></p>
+      <p>&copy; 2025 ToolVerse AI • Built with ❤️ for AI explorers by <strong>You</strong></p>
     </div>
   </footer>
 
