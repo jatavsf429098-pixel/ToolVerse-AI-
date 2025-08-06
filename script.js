@@ -1,57 +1,35 @@
-let tools = [];
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("tools.json")
+    .then(response => response.json())
+    .then(data => {
+      const container = document.getElementById("tools-container");
+      const search = document.getElementById("search");
 
-async function loadTools() {
-  const res = await fetch('tools.json');
-  tools = await res.json();
-  populateCategories();
-  displayTools(tools);
-}
+      function displayTools(tools) {
+        container.innerHTML = "";
+        tools.forEach(tool => {
+          const card = document.createElement("div");
+          card.className = "tool-card";
+          card.innerHTML = `
+            <h3>${tool.name}</h3>
+            <p><strong>Category:</strong> ${tool.category}</p>
+            <p>${tool.description}</p>
+            <a href="${tool.link}" target="_blank">Visit</a>
+          `;
+          container.appendChild(card);
+        });
+      }
 
-function displayTools(data) {
-  const container = document.getElementById('toolsContainer');
-  container.innerHTML = "";
+      search.addEventListener("input", () => {
+        const value = search.value.toLowerCase();
+        const filtered = data.filter(tool =>
+          tool.name.toLowerCase().includes(value) ||
+          tool.description.toLowerCase().includes(value) ||
+          tool.category.toLowerCase().includes(value)
+        );
+        displayTools(filtered);
+      });
 
-  data.forEach(tool => {
-    const card = document.createElement('div');
-    card.className = "tool-card";
-    card.innerHTML = `
-      <h3>${tool.name}</h3>
-      <p>${tool.description}</p>
-      <button onclick="window.open('${tool.link}', '_blank')">Visit</button>
-    `;
-    container.appendChild(card);
-  });
-}
-
-function populateCategories() {
-  const select = document.getElementById('categoryFilter');
-  const categories = ["all", ...new Set(tools.map(t => t.category))];
-  categories.forEach(cat => {
-    const option = document.createElement('option');
-    option.value = cat;
-    option.textContent = cat.charAt(0).toUpperCase() + cat.slice(1);
-    select.appendChild(option);
-  });
-}
-
-document.getElementById('searchBox').addEventListener('input', () => {
-  filterTools();
+      displayTools(data);
+    });
 });
-document.getElementById('categoryFilter').addEventListener('change', () => {
-  filterTools();
-});
-
-function filterTools() {
-  const search = document.getElementById('searchBox').value.toLowerCase();
-  const category = document.getElementById('categoryFilter').value;
-
-  const filtered = tools.filter(tool => {
-    const matchSearch = tool.name.toLowerCase().includes(search);
-    const matchCategory = category === "all" || tool.category === category;
-    return matchSearch && matchCategory;
-  });
-
-  displayTools(filtered);
-}
-
-loadTools();
