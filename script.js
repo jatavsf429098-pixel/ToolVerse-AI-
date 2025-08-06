@@ -1,66 +1,63 @@
-
-document.addEventListener("DOMContentLoaded", function () {
-  const toolList = document.getElementById("tool-list");
-  const searchInput = document.getElementById("searchInput");
-  const categoryFilter = document.getElementById("categoryFilter");
-
-  let tools = [];
-
-  // Fetch tools from tools.json
+// Load JSON and display tools
+document.addEventListener("DOMContentLoaded", () => {
   fetch("tools.json")
-    .then((response) => response.json())
-    .then((data) => {
-      tools = data;
-      renderCategories(tools);
-      renderTools(tools);
-    });
-
-  // Render tool cards
-  function renderTools(toolsToRender) {
-    toolList.innerHTML = "";
-    toolsToRender.forEach((tool) => {
-      const toolCard = document.createElement("div");
-      toolCard.className = "tool-card";
-      toolCard.innerHTML = \`
-        <h3>\${tool.name}</h3>
-        <p>\${tool.description}</p>
-        <a href="\${tool.link}" target="_blank">Visit Tool</a>
-        <span class="category-tag">\${tool.category}</span>
-      \`;
-      toolList.appendChild(toolCard);
-    });
-  }
-
-  // Render category filter options
-  function renderCategories(tools) {
-    const categories = ["All Categories", ...new Set(tools.map((t) => t.category))];
-    categories.forEach((cat) => {
-      const option = document.createElement("option");
-      option.value = cat.toLowerCase();
-      option.textContent = cat;
-      categoryFilter.appendChild(option);
-    });
-  }
-
-  // Filter tools on search
-  searchInput.addEventListener("input", () => {
-    filterAndRender();
-  });
-
-  // Filter tools on category selection
-  categoryFilter.addEventListener("change", () => {
-    filterAndRender();
-  });
-
-  function filterAndRender() {
-    const searchTerm = searchInput.value.toLowerCase();
-    const selectedCategory = categoryFilter.value;
-    const filteredTools = tools.filter((tool) => {
-      const matchesCategory =
-        selectedCategory === "all categories" || tool.category.toLowerCase() === selectedCategory;
-      const matchesSearch = tool.name.toLowerCase().includes(searchTerm) || tool.description.toLowerCase().includes(searchTerm);
-      return matchesCategory && matchesSearch;
-    });
-    renderTools(filteredTools);
-  }
+    .then((res) => res.json())
+    .then((tools) => {
+      displayTools(tools);
+      populateCategories(tools);
+      addSearchAndFilter(tools);
+    })
+    .catch((err) => console.error("Error loading tools.json:", err));
 });
+
+function displayTools(tools) {
+  const container = document.getElementById("tool-list");
+  container.innerHTML = "";
+
+  tools.forEach((tool) => {
+    const card = document.createElement("div");
+    card.classList.add("tool-card");
+
+    card.innerHTML = `
+      <h3>${tool.name}</h3>
+      <p>${tool.description}</p>
+      <a href="${tool.link}" target="_blank">🔗 Visit Tool</a>
+    `;
+
+    container.appendChild(card);
+  });
+}
+
+function populateCategories(tools) {
+  const categories = new Set(tools.map((tool) => tool.category));
+  const filter = document.getElementById("categoryFilter");
+
+  categories.forEach((cat) => {
+    const option = document.createElement("option");
+    option.value = cat;
+    option.textContent = cat;
+    filter.appendChild(option);
+  });
+}
+
+function addSearchAndFilter(tools) {
+  const searchInput = document.getElementById("searchInput");
+  const filter = document.getElementById("categoryFilter");
+
+  const filterTools = () => {
+    const query = searchInput.value.toLowerCase();
+    const category = filter.value;
+
+    const filtered = tools.filter((tool) => {
+      const matchName = tool.name.toLowerCase().includes(query);
+      const matchDesc = tool.description.toLowerCase().includes(query);
+      const matchCat = category === "all" || tool.category === category;
+      return (matchName || matchDesc) && matchCat;
+    });
+
+    displayTools(filtered);
+  };
+
+  searchInput.addEventListener("input", filterTools);
+  filter.addEventListener("change", filterTools);
+}
