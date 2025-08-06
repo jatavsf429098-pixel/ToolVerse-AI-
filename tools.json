@@ -1,159 +1,62 @@
 [
   {
     "name": "ChatGPT",
-    "category": "AI Chatbot",
-    "description": "OpenAI’s powerful chatbot.",
+    "description": "An AI chatbot by OpenAI that can answer questions, write content, and more.",
     "link": "https://chat.openai.com/",
-    "icon": "https://chat.openai.com/favicon.ico"
+    "category": "Chatbot"
   },
   {
-    "name": "Canva AI",
-    "category": "Image Design",
-    "description": "AI-powered design tool.",
-    "link": "https://www.canva.com/ai",
-    "icon": "https://www.canva.com/favicon.ico"
-  },
-  {
-    "name": "Pictory",
-    "category": "Video Generator",
-    "description": "Create short videos from long content.",
-    "link": "https://pictory.ai",
-    "icon": "https://pictory.ai/favicon.ico"
+    "name": "DALL·E",
+    "description": "Generate images from text prompts using OpenAI's DALL·E.",
+    "link": "https://openai.com/dall-e",
+    "category": "Image Generation"
   },
   {
     "name": "Runway ML",
-    "category": "Video Editing",
-    "description": "AI video editor & generator.",
-    "link": "https://runwayml.com",
-    "icon": "https://runwayml.com/favicon.ico"
+    "description": "Create videos using AI with tools like text-to-video, green screen, etc.",
+    "link": "https://runwayml.com/",
+    "category": "Video Generation"
   },
   {
     "name": "Copy.ai",
-    "category": "Content Writing",
-    "description": "AI writing assistant.",
-    "link": "https://www.copy.ai",
-    "icon": "https://www.copy.ai/favicon.ico"
+    "description": "AI-powered copywriting tool for ads, blogs, emails, and more.",
+    "link": "https://www.copy.ai/",
+    "category": "Writing Assistant"
+  },
+  {
+    "name": "Pictory",
+    "description": "Turn long-form content into short, engaging videos using AI.",
+    "link": "https://pictory.ai/",
+    "category": "Video Generation"
   },
   {
     "name": "Jasper",
-    "category": "Content Writing",
-    "description": "Content writing AI for businesses.",
-    "link": "https://www.jasper.ai",
-    "icon": "https://www.jasper.ai/favicon.ico"
-  },
-  {
-    "name": "Midjourney",
-    "category": "Image Generator",
-    "description": "AI art generator via Discord.",
-    "link": "https://www.midjourney.com",
-    "icon": "https://www.midjourney.com/favicon.ico"
-  },
-  {
-    "name": "DALL·E 2",
-    "category": "Image Generator",
-    "description": "Image creation by OpenAI.",
-    "link": "https://openai.com/dall-e",
-    "icon": "https://openai.com/favicon.ico"
+    "description": "AI writing assistant for marketing and content creation.",
+    "link": "https://www.jasper.ai/",
+    "category": "Writing Assistant"
   },
   {
     "name": "Synthesia",
-    "category": "AI Video",
-    "description": "Create AI videos with avatars.",
-    "link": "https://www.synthesia.io",
-    "icon": "https://www.synthesia.io/favicon.ico"
+    "description": "Create professional AI videos from text in minutes.",
+    "link": "https://www.synthesia.io/",
+    "category": "Video Generation"
   },
   {
-    "name": "Lumen5",
-    "category": "Video Creator",
-    "description": "Turn blog posts into videos.",
-    "link": "https://www.lumen5.com",
-    "icon": "https://www.lumen5.com/favicon.ico"
-  },
-  {
-    "name": "Looka",
-    "category": "Logo Maker",
-    "description": "AI-based logo generator.",
-    "link": "https://looka.com",
-    "icon": "https://looka.com/favicon.ico"
-  },
-  {
-    "name": "Fliki",
-    "category": "Text to Video",
-    "description": "Turn text into videos with voice.",
-    "link": "https://fliki.ai",
-    "icon": "https://fliki.ai/favicon.ico"
-  },
-  {
-    "name": "Cleanup.pictures",
-    "category": "Photo Editor",
-    "description": "Remove unwanted objects from images.",
-    "link": "https://cleanup.pictures",
-    "icon": "https://cleanup.pictures/favicon.ico"
-  },
-  {
-    "name": "Remove.bg",
-    "category": "Photo Editor",
-    "description": "Remove image backgrounds in seconds.",
-    "link": "https://www.remove.bg",
-    "icon": "https://www.remove.bg/favicon.ico"
+    "name": "Midjourney",
+    "description": "AI-based tool to generate high-quality artistic images from text.",
+    "link": "https://www.midjourney.com/",
+    "category": "Image Generation"
   },
   {
     "name": "Notion AI",
-    "category": "Productivity",
-    "description": "AI inside Notion for productivity.",
+    "description": "Enhance your productivity with AI in your Notion workspace.",
     "link": "https://www.notion.so/product/ai",
-    "icon": "https://www.notion.so/images/favicon.ico"
-  },
-  {
-    "name": "Tome",
-    "category": "Presentation",
-    "description": "AI-powered storytelling tool.",
-    "link": "https://tome.app",
-    "icon": "https://tome.app/favicon.ico"
-  },
-  {
-    "name": "Descript",
-    "category": "Audio/Video Editor",
-    "description": "Edit videos by editing text.",
-    "link": "https://www.descript.com",
-    "icon": "https://www.descript.com/favicon.ico"
-  },
-  {
-    "name": "Durable",
-    "category": "Website Builder",
-    "description": "Create websites in 30 seconds.",
-    "link": "https://durable.co",
-    "icon": "https://durable.co/favicon.ico"
+    "category": "Productivity"
   },
   {
     "name": "Beautiful.ai",
-    "category": "Presentation",
-    "description": "Smart slide deck creator.",
-    "link": "https://www.beautiful.ai",
-    "icon": "https://www.beautiful.ai/favicon.ico"
-  },
-  {
-    "name": "SlidesAI",
-    "category": "Presentation",
-    "description": "AI-generated Google Slides.",
-    "link": "https://www.slidesai.io",
-    "icon": "https://www.slidesai.io/favicon.ico"
-  },
-
-  // Dummy tools (replace with real ones later)
-  {
-    "name": "AI Tool 21",
-    "category": "Various",
-    "description": "Description for AI Tool 21.",
-    "link": "https://example.com/aitool21",
-    "icon": "https://example.com/favicon.ico"
-  },
-  {
-    "name": "AI Tool 22",
-    "category": "Various",
-    "description": "Description for AI Tool 22.",
-    "link": "https://example.com/aitool22",
-    "icon": "https://example.com/favicon.ico"
+    "description": "AI-powered presentation tool that designs slides for you.",
+    "link": "https://www.beautiful.ai/",
+    "category": "Design"
   }
-  // ... repeat till "AI Tool 100"
 ]
