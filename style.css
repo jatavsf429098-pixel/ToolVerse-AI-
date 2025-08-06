@@ -1,14 +1,12 @@
-
-/* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background: #f4f6fa;
+  background-color: #f4f6fc;
   color: #333;
   line-height: 1.6;
 }
@@ -20,121 +18,113 @@ body {
   padding: 20px 0;
 }
 
-/* Header */
 .header {
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-  color: white;
-  padding: 60px 0 40px;
   text-align: center;
+  padding: 40px 0 20px;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
 }
 
 .header h1 {
   font-size: 3rem;
-  margin-bottom: 10px;
 }
 
 .header h1 span {
-  color: #00ffae;
+  color: #ffc107;
 }
 
 .subtitle {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  margin-top: 10px;
   opacity: 0.9;
 }
 
 .search-container {
-  margin-top: 30px;
+  margin-top: 20px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .search-container input,
 .search-container select {
-  padding: 12px 15px;
-  border-radius: 6px;
+  padding: 10px 15px;
   border: none;
+  border-radius: 8px;
   font-size: 1rem;
-  width: 250px;
-  max-width: 100%;
   outline: none;
 }
 
-/* Tool Grid */
+.search-container input {
+  width: 250px;
+}
+
+.main {
+  padding: 40px 0;
+}
+
 .tool-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
+  gap: 20px;
 }
 
-/* Tool Card */
 .tool-card {
-  background: white;
+  background-color: white;
   border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .tool-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-5px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 
 .tool-card h3 {
-  color: #111;
   margin-bottom: 10px;
-  font-size: 1.3rem;
+  color: #333;
+  font-size: 1.2rem;
 }
 
 .tool-card p {
   font-size: 0.95rem;
+  margin-bottom: 12px;
   color: #555;
-  flex-grow: 1;
-  margin-bottom: 15px;
 }
 
-.tool-card .tag {
+.tool-card a {
   display: inline-block;
-  background-color: #00ffae;
-  color: #000;
-  font-size: 0.75rem;
-  padding: 4px 10px;
-  border-radius: 30px;
-  margin-bottom: 10px;
-}
-
-.tool-card .visit-btn {
-  text-align: center;
-  display: inline-block;
-  background-color: #2c5364;
-  color: #fff;
-  padding: 10px 14px;
-  border-radius: 6px;
+  margin-top: 10px;
+  padding: 8px 14px;
+  background-color: #2575fc;
+  color: white;
   text-decoration: none;
+  border-radius: 6px;
   font-weight: 600;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.2s ease;
 }
 
-.tool-card .visit-btn:hover {
-  background-color: #00ffae;
-  color: #000;
+.tool-card a:hover {
+  background-color: #1a5ed1;
 }
 
-/* Footer */
 .footer {
-  background-color: #1b1f25;
-  color: #aaa;
-  padding: 30px 0;
+  background-color: #f0f0f0;
   text-align: center;
-  margin-top: 60px;
+  padding: 20px 0;
+  font-size: 0.95rem;
+  color: #777;
 }
 
-.footer strong {
-  color: #fff;
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .search-container input {
+    width: 100%;
+  }
 }
