@@ -1,63 +1,74 @@
-// Load JSON and display tools
-document.addEventListener("DOMContentLoaded", () => {
-  fetch("tools.json")
-    .then((res) => res.json())
-    .then((tools) => {
-      displayTools(tools);
-      populateCategories(tools);
-      addSearchAndFilter(tools);
-    })
-    .catch((err) => console.error("Error loading tools.json:", err));
-});
+// script.js
 
-function displayTools(tools) {
-  const container = document.getElementById("tool-list");
-  container.innerHTML = "";
+const toolListContainer = document.getElementById('tool-list');
+const searchInput = document.getElementById('searchInput');
+const categoryFilter = document.getElementById('categoryFilter');
+const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
-  tools.forEach((tool) => {
-    const card = document.createElement("div");
-    card.classList.add("tool-card");
+let tools = [];
 
+// Fetch tools from JSON
+fetch('tools.json')
+  .then((response) => response.json())
+  .then((data) => {
+    tools = data;
+    populateCategories(tools);
+    renderTools(tools);
+  });
+
+// Render tools
+function renderTools(toolsToRender) {
+  toolListContainer.innerHTML = '';
+  toolsToRender.forEach((tool) => {
+    const card = document.createElement('div');
+    card.className = 'tool-card';
     card.innerHTML = `
       <h3>${tool.name}</h3>
       <p>${tool.description}</p>
-      <a href="${tool.link}" target="_blank">🔗 Visit Tool</a>
+      <a href="${tool.link}" target="_blank">Visit Tool</a>
     `;
-
-    container.appendChild(card);
+    toolListContainer.appendChild(card);
   });
 }
 
+// Populate category dropdown
 function populateCategories(tools) {
-  const categories = new Set(tools.map((tool) => tool.category));
-  const filter = document.getElementById("categoryFilter");
-
+  const categories = ['All', ...new Set(tools.map(t => t.category))];
+  categoryFilter.innerHTML = '';
   categories.forEach((cat) => {
-    const option = document.createElement("option");
-    option.value = cat;
+    const option = document.createElement('option');
+    option.value = cat.toLowerCase();
     option.textContent = cat;
-    filter.appendChild(option);
+    categoryFilter.appendChild(option);
   });
 }
 
-function addSearchAndFilter(tools) {
-  const searchInput = document.getElementById("searchInput");
-  const filter = document.getElementById("categoryFilter");
+// Search functionality
+searchInput.addEventListener('input', () => {
+  const keyword = searchInput.value.toLowerCase();
+  const filtered = tools.filter(tool =>
+    tool.name.toLowerCase().includes(keyword) ||
+    tool.description.toLowerCase().includes(keyword)
+  );
+  renderTools(filtered);
+});
 
-  const filterTools = () => {
-    const query = searchInput.value.toLowerCase();
-    const category = filter.value;
+// Filter by category
+categoryFilter.addEventListener('change', () => {
+  const selected = categoryFilter.value;
+  if (selected === 'all') {
+    renderTools(tools);
+  } else {
+    const filtered = tools.filter(tool => tool.category.toLowerCase() === selected);
+    renderTools(filtered);
+  }
+});
 
-    const filtered = tools.filter((tool) => {
-      const matchName = tool.name.toLowerCase().includes(query);
-      const matchDesc = tool.description.toLowerCase().includes(query);
-      const matchCat = category === "all" || tool.category === category;
-      return (matchName || matchDesc) && matchCat;
-    });
+// Scroll to Top button
+window.onscroll = () => {
+  scrollToTopBtn.style.display = document.documentElement.scrollTop > 200 ? 'block' : 'none';
+};
 
-    displayTools(filtered);
-  };
-
-  searchInput.addEventListener("input", filterTools);
-  filter.addEventListener("change", filterTools);
-}
+scrollToTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
