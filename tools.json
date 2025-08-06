@@ -1,20 +1,1354 @@
 [
   {
-    "name": "ChatGPT",
-    "category": "Chatbot",
-    "description": "OpenAI’s powerful AI chatbot.",
-    "link": "https://chat.openai.com",
-    "tags": ["chat", "AI", "NLP"],
-    "price": "Free",
-    "featured": true
+    "id": "vid-1",
+    "name": "Pictory",
+    "category": "Video Generator",
+    "tags": [
+      "video",
+      "text-to-video",
+      "ai video"
+    ],
+    "description": "Create stunning videos from articles using AI.",
+    "link": "https://pictory.ai",
+    "image": "https://pictory.ai/logo.png"
   },
   {
-    "name": "Copy.ai",
-    "category": "Writing",
-    "description": "AI tool for generating marketing copy.",
-    "link": "https://www.copy.ai",
-    "tags": ["writing", "marketing", "content"],
-    "price": "Freemium",
-    "featured": false
+    "id": "img-1",
+    "name": "Midjourney",
+    "category": "Image Generator",
+    "tags": [
+      "image",
+      "art",
+      "text-to-image"
+    ],
+    "description": "Generate breathtaking AI art from text prompts.",
+    "link": "https://www.midjourney.com/",
+    "image": "https://midjourney.com/icon.png"
+  },
+  {
+    "id": "txt-1",
+    "name": "Runway ML",
+    "category": "Text to Video",
+    "tags": [
+      "text",
+      "video",
+      "text-to-video"
+    ],
+    "description": "Convert text into cinematic videos using Gen-2 AI.",
+    "link": "https://runwayml.com",
+    "image": "https://runwayml.com/logo.png"
+  },
+  {
+    "id": "tool-4",
+    "name": "AI Tool 4",
+    "category": "Voice AI",
+    "tags": [
+      "voice-ai",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 4 is a powerful voice ai for modern users.",
+    "link": "https://example.com/tool4",
+    "image": "https://example.com/images/tool4.png"
+  },
+  {
+    "id": "tool-5",
+    "name": "AI Tool 5",
+    "category": "Coding AI",
+    "tags": [
+      "coding-ai",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 5 is a powerful coding ai for modern users.",
+    "link": "https://example.com/tool5",
+    "image": "https://example.com/images/tool5.png"
+  },
+  {
+    "id": "tool-6",
+    "name": "AI Tool 6",
+    "category": "AI Presentation Tools",
+    "tags": [
+      "ai-presentation-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 6 is a powerful ai presentation tools for modern users.",
+    "link": "https://example.com/tool6",
+    "image": "https://example.com/images/tool6.png"
+  },
+  {
+    "id": "tool-7",
+    "name": "AI Tool 7",
+    "category": "AI Website Builders",
+    "tags": [
+      "ai-website-builders",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 7 is a powerful ai website builders for modern users.",
+    "link": "https://example.com/tool7",
+    "image": "https://example.com/images/tool7.png"
+  },
+  {
+    "id": "tool-8",
+    "name": "AI Tool 8",
+    "category": "Chatbot Tools",
+    "tags": [
+      "chatbot-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 8 is a powerful chatbot tools for modern users.",
+    "link": "https://example.com/tool8",
+    "image": "https://example.com/images/tool8.png"
+  },
+  {
+    "id": "tool-9",
+    "name": "AI Tool 9",
+    "category": "AI Avatars",
+    "tags": [
+      "ai-avatars",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 9 is a powerful ai avatars for modern users.",
+    "link": "https://example.com/tool9",
+    "image": "https://example.com/images/tool9.png"
+  },
+  {
+    "id": "tool-10",
+    "name": "AI Tool 10",
+    "category": "AI Music Tools",
+    "tags": [
+      "ai-music-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 10 is a powerful ai music tools for modern users.",
+    "link": "https://example.com/tool10",
+    "image": "https://example.com/images/tool10.png"
+  },
+  {
+    "id": "tool-11",
+    "name": "AI Tool 11",
+    "category": "AI Resume/Job Tools",
+    "tags": [
+      "ai-resume/job-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 11 is a powerful ai resume/job tools for modern users.",
+    "link": "https://example.com/tool11",
+    "image": "https://example.com/images/tool11.png"
+  },
+  {
+    "id": "tool-12",
+    "name": "AI Tool 12",
+    "category": "AI PDF Tools",
+    "tags": [
+      "ai-pdf-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 12 is a powerful ai pdf tools for modern users.",
+    "link": "https://example.com/tool12",
+    "image": "https://example.com/images/tool12.png"
+  },
+  {
+    "id": "tool-13",
+    "name": "AI Tool 13",
+    "category": "Social Media Tools",
+    "tags": [
+      "social-media-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 13 is a powerful social media tools for modern users.",
+    "link": "https://example.com/tool13",
+    "image": "https://example.com/images/tool13.png"
+  },
+  {
+    "id": "tool-14",
+    "name": "AI Tool 14",
+    "category": "Video Generator",
+    "tags": [
+      "video-generator",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 14 is a powerful video generator for modern users.",
+    "link": "https://example.com/tool14",
+    "image": "https://example.com/images/tool14.png"
+  },
+  {
+    "id": "tool-15",
+    "name": "AI Tool 15",
+    "category": "Image Generator",
+    "tags": [
+      "image-generator",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 15 is a powerful image generator for modern users.",
+    "link": "https://example.com/tool15",
+    "image": "https://example.com/images/tool15.png"
+  },
+  {
+    "id": "tool-16",
+    "name": "AI Tool 16",
+    "category": "Text to Video",
+    "tags": [
+      "text-to-video",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 16 is a powerful text to video for modern users.",
+    "link": "https://example.com/tool16",
+    "image": "https://example.com/images/tool16.png"
+  },
+  {
+    "id": "tool-17",
+    "name": "AI Tool 17",
+    "category": "Text Generator",
+    "tags": [
+      "text-generator",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 17 is a powerful text generator for modern users.",
+    "link": "https://example.com/tool17",
+    "image": "https://example.com/images/tool17.png"
+  },
+  {
+    "id": "tool-18",
+    "name": "AI Tool 18",
+    "category": "Voice AI",
+    "tags": [
+      "voice-ai",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 18 is a powerful voice ai for modern users.",
+    "link": "https://example.com/tool18",
+    "image": "https://example.com/images/tool18.png"
+  },
+  {
+    "id": "tool-19",
+    "name": "AI Tool 19",
+    "category": "Coding AI",
+    "tags": [
+      "coding-ai",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 19 is a powerful coding ai for modern users.",
+    "link": "https://example.com/tool19",
+    "image": "https://example.com/images/tool19.png"
+  },
+  {
+    "id": "tool-20",
+    "name": "AI Tool 20",
+    "category": "AI Presentation Tools",
+    "tags": [
+      "ai-presentation-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 20 is a powerful ai presentation tools for modern users.",
+    "link": "https://example.com/tool20",
+    "image": "https://example.com/images/tool20.png"
+  },
+  {
+    "id": "tool-21",
+    "name": "AI Tool 21",
+    "category": "AI Website Builders",
+    "tags": [
+      "ai-website-builders",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 21 is a powerful ai website builders for modern users.",
+    "link": "https://example.com/tool21",
+    "image": "https://example.com/images/tool21.png"
+  },
+  {
+    "id": "tool-22",
+    "name": "AI Tool 22",
+    "category": "Chatbot Tools",
+    "tags": [
+      "chatbot-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 22 is a powerful chatbot tools for modern users.",
+    "link": "https://example.com/tool22",
+    "image": "https://example.com/images/tool22.png"
+  },
+  {
+    "id": "tool-23",
+    "name": "AI Tool 23",
+    "category": "AI Avatars",
+    "tags": [
+      "ai-avatars",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 23 is a powerful ai avatars for modern users.",
+    "link": "https://example.com/tool23",
+    "image": "https://example.com/images/tool23.png"
+  },
+  {
+    "id": "tool-24",
+    "name": "AI Tool 24",
+    "category": "AI Music Tools",
+    "tags": [
+      "ai-music-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 24 is a powerful ai music tools for modern users.",
+    "link": "https://example.com/tool24",
+    "image": "https://example.com/images/tool24.png"
+  },
+  {
+    "id": "tool-25",
+    "name": "AI Tool 25",
+    "category": "AI Resume/Job Tools",
+    "tags": [
+      "ai-resume/job-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 25 is a powerful ai resume/job tools for modern users.",
+    "link": "https://example.com/tool25",
+    "image": "https://example.com/images/tool25.png"
+  },
+  {
+    "id": "tool-26",
+    "name": "AI Tool 26",
+    "category": "AI PDF Tools",
+    "tags": [
+      "ai-pdf-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 26 is a powerful ai pdf tools for modern users.",
+    "link": "https://example.com/tool26",
+    "image": "https://example.com/images/tool26.png"
+  },
+  {
+    "id": "tool-27",
+    "name": "AI Tool 27",
+    "category": "Social Media Tools",
+    "tags": [
+      "social-media-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 27 is a powerful social media tools for modern users.",
+    "link": "https://example.com/tool27",
+    "image": "https://example.com/images/tool27.png"
+  },
+  {
+    "id": "tool-28",
+    "name": "AI Tool 28",
+    "category": "Video Generator",
+    "tags": [
+      "video-generator",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 28 is a powerful video generator for modern users.",
+    "link": "https://example.com/tool28",
+    "image": "https://example.com/images/tool28.png"
+  },
+  {
+    "id": "tool-29",
+    "name": "AI Tool 29",
+    "category": "Image Generator",
+    "tags": [
+      "image-generator",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 29 is a powerful image generator for modern users.",
+    "link": "https://example.com/tool29",
+    "image": "https://example.com/images/tool29.png"
+  },
+  {
+    "id": "tool-30",
+    "name": "AI Tool 30",
+    "category": "Text to Video",
+    "tags": [
+      "text-to-video",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 30 is a powerful text to video for modern users.",
+    "link": "https://example.com/tool30",
+    "image": "https://example.com/images/tool30.png"
+  },
+  {
+    "id": "tool-31",
+    "name": "AI Tool 31",
+    "category": "Text Generator",
+    "tags": [
+      "text-generator",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 31 is a powerful text generator for modern users.",
+    "link": "https://example.com/tool31",
+    "image": "https://example.com/images/tool31.png"
+  },
+  {
+    "id": "tool-32",
+    "name": "AI Tool 32",
+    "category": "Voice AI",
+    "tags": [
+      "voice-ai",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 32 is a powerful voice ai for modern users.",
+    "link": "https://example.com/tool32",
+    "image": "https://example.com/images/tool32.png"
+  },
+  {
+    "id": "tool-33",
+    "name": "AI Tool 33",
+    "category": "Coding AI",
+    "tags": [
+      "coding-ai",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 33 is a powerful coding ai for modern users.",
+    "link": "https://example.com/tool33",
+    "image": "https://example.com/images/tool33.png"
+  },
+  {
+    "id": "tool-34",
+    "name": "AI Tool 34",
+    "category": "AI Presentation Tools",
+    "tags": [
+      "ai-presentation-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 34 is a powerful ai presentation tools for modern users.",
+    "link": "https://example.com/tool34",
+    "image": "https://example.com/images/tool34.png"
+  },
+  {
+    "id": "tool-35",
+    "name": "AI Tool 35",
+    "category": "AI Website Builders",
+    "tags": [
+      "ai-website-builders",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 35 is a powerful ai website builders for modern users.",
+    "link": "https://example.com/tool35",
+    "image": "https://example.com/images/tool35.png"
+  },
+  {
+    "id": "tool-36",
+    "name": "AI Tool 36",
+    "category": "Chatbot Tools",
+    "tags": [
+      "chatbot-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 36 is a powerful chatbot tools for modern users.",
+    "link": "https://example.com/tool36",
+    "image": "https://example.com/images/tool36.png"
+  },
+  {
+    "id": "tool-37",
+    "name": "AI Tool 37",
+    "category": "AI Avatars",
+    "tags": [
+      "ai-avatars",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 37 is a powerful ai avatars for modern users.",
+    "link": "https://example.com/tool37",
+    "image": "https://example.com/images/tool37.png"
+  },
+  {
+    "id": "tool-38",
+    "name": "AI Tool 38",
+    "category": "AI Music Tools",
+    "tags": [
+      "ai-music-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 38 is a powerful ai music tools for modern users.",
+    "link": "https://example.com/tool38",
+    "image": "https://example.com/images/tool38.png"
+  },
+  {
+    "id": "tool-39",
+    "name": "AI Tool 39",
+    "category": "AI Resume/Job Tools",
+    "tags": [
+      "ai-resume/job-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 39 is a powerful ai resume/job tools for modern users.",
+    "link": "https://example.com/tool39",
+    "image": "https://example.com/images/tool39.png"
+  },
+  {
+    "id": "tool-40",
+    "name": "AI Tool 40",
+    "category": "AI PDF Tools",
+    "tags": [
+      "ai-pdf-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 40 is a powerful ai pdf tools for modern users.",
+    "link": "https://example.com/tool40",
+    "image": "https://example.com/images/tool40.png"
+  },
+  {
+    "id": "tool-41",
+    "name": "AI Tool 41",
+    "category": "Social Media Tools",
+    "tags": [
+      "social-media-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 41 is a powerful social media tools for modern users.",
+    "link": "https://example.com/tool41",
+    "image": "https://example.com/images/tool41.png"
+  },
+  {
+    "id": "tool-42",
+    "name": "AI Tool 42",
+    "category": "Video Generator",
+    "tags": [
+      "video-generator",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 42 is a powerful video generator for modern users.",
+    "link": "https://example.com/tool42",
+    "image": "https://example.com/images/tool42.png"
+  },
+  {
+    "id": "tool-43",
+    "name": "AI Tool 43",
+    "category": "Image Generator",
+    "tags": [
+      "image-generator",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 43 is a powerful image generator for modern users.",
+    "link": "https://example.com/tool43",
+    "image": "https://example.com/images/tool43.png"
+  },
+  {
+    "id": "tool-44",
+    "name": "AI Tool 44",
+    "category": "Text to Video",
+    "tags": [
+      "text-to-video",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 44 is a powerful text to video for modern users.",
+    "link": "https://example.com/tool44",
+    "image": "https://example.com/images/tool44.png"
+  },
+  {
+    "id": "tool-45",
+    "name": "AI Tool 45",
+    "category": "Text Generator",
+    "tags": [
+      "text-generator",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 45 is a powerful text generator for modern users.",
+    "link": "https://example.com/tool45",
+    "image": "https://example.com/images/tool45.png"
+  },
+  {
+    "id": "tool-46",
+    "name": "AI Tool 46",
+    "category": "Voice AI",
+    "tags": [
+      "voice-ai",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 46 is a powerful voice ai for modern users.",
+    "link": "https://example.com/tool46",
+    "image": "https://example.com/images/tool46.png"
+  },
+  {
+    "id": "tool-47",
+    "name": "AI Tool 47",
+    "category": "Coding AI",
+    "tags": [
+      "coding-ai",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 47 is a powerful coding ai for modern users.",
+    "link": "https://example.com/tool47",
+    "image": "https://example.com/images/tool47.png"
+  },
+  {
+    "id": "tool-48",
+    "name": "AI Tool 48",
+    "category": "AI Presentation Tools",
+    "tags": [
+      "ai-presentation-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 48 is a powerful ai presentation tools for modern users.",
+    "link": "https://example.com/tool48",
+    "image": "https://example.com/images/tool48.png"
+  },
+  {
+    "id": "tool-49",
+    "name": "AI Tool 49",
+    "category": "AI Website Builders",
+    "tags": [
+      "ai-website-builders",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 49 is a powerful ai website builders for modern users.",
+    "link": "https://example.com/tool49",
+    "image": "https://example.com/images/tool49.png"
+  },
+  {
+    "id": "tool-50",
+    "name": "AI Tool 50",
+    "category": "Chatbot Tools",
+    "tags": [
+      "chatbot-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 50 is a powerful chatbot tools for modern users.",
+    "link": "https://example.com/tool50",
+    "image": "https://example.com/images/tool50.png"
+  },
+  {
+    "id": "tool-51",
+    "name": "AI Tool 51",
+    "category": "AI Avatars",
+    "tags": [
+      "ai-avatars",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 51 is a powerful ai avatars for modern users.",
+    "link": "https://example.com/tool51",
+    "image": "https://example.com/images/tool51.png"
+  },
+  {
+    "id": "tool-52",
+    "name": "AI Tool 52",
+    "category": "AI Music Tools",
+    "tags": [
+      "ai-music-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 52 is a powerful ai music tools for modern users.",
+    "link": "https://example.com/tool52",
+    "image": "https://example.com/images/tool52.png"
+  },
+  {
+    "id": "tool-53",
+    "name": "AI Tool 53",
+    "category": "AI Resume/Job Tools",
+    "tags": [
+      "ai-resume/job-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 53 is a powerful ai resume/job tools for modern users.",
+    "link": "https://example.com/tool53",
+    "image": "https://example.com/images/tool53.png"
+  },
+  {
+    "id": "tool-54",
+    "name": "AI Tool 54",
+    "category": "AI PDF Tools",
+    "tags": [
+      "ai-pdf-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 54 is a powerful ai pdf tools for modern users.",
+    "link": "https://example.com/tool54",
+    "image": "https://example.com/images/tool54.png"
+  },
+  {
+    "id": "tool-55",
+    "name": "AI Tool 55",
+    "category": "Social Media Tools",
+    "tags": [
+      "social-media-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 55 is a powerful social media tools for modern users.",
+    "link": "https://example.com/tool55",
+    "image": "https://example.com/images/tool55.png"
+  },
+  {
+    "id": "tool-56",
+    "name": "AI Tool 56",
+    "category": "Video Generator",
+    "tags": [
+      "video-generator",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 56 is a powerful video generator for modern users.",
+    "link": "https://example.com/tool56",
+    "image": "https://example.com/images/tool56.png"
+  },
+  {
+    "id": "tool-57",
+    "name": "AI Tool 57",
+    "category": "Image Generator",
+    "tags": [
+      "image-generator",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 57 is a powerful image generator for modern users.",
+    "link": "https://example.com/tool57",
+    "image": "https://example.com/images/tool57.png"
+  },
+  {
+    "id": "tool-58",
+    "name": "AI Tool 58",
+    "category": "Text to Video",
+    "tags": [
+      "text-to-video",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 58 is a powerful text to video for modern users.",
+    "link": "https://example.com/tool58",
+    "image": "https://example.com/images/tool58.png"
+  },
+  {
+    "id": "tool-59",
+    "name": "AI Tool 59",
+    "category": "Text Generator",
+    "tags": [
+      "text-generator",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 59 is a powerful text generator for modern users.",
+    "link": "https://example.com/tool59",
+    "image": "https://example.com/images/tool59.png"
+  },
+  {
+    "id": "tool-60",
+    "name": "AI Tool 60",
+    "category": "Voice AI",
+    "tags": [
+      "voice-ai",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 60 is a powerful voice ai for modern users.",
+    "link": "https://example.com/tool60",
+    "image": "https://example.com/images/tool60.png"
+  },
+  {
+    "id": "tool-61",
+    "name": "AI Tool 61",
+    "category": "Coding AI",
+    "tags": [
+      "coding-ai",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 61 is a powerful coding ai for modern users.",
+    "link": "https://example.com/tool61",
+    "image": "https://example.com/images/tool61.png"
+  },
+  {
+    "id": "tool-62",
+    "name": "AI Tool 62",
+    "category": "AI Presentation Tools",
+    "tags": [
+      "ai-presentation-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 62 is a powerful ai presentation tools for modern users.",
+    "link": "https://example.com/tool62",
+    "image": "https://example.com/images/tool62.png"
+  },
+  {
+    "id": "tool-63",
+    "name": "AI Tool 63",
+    "category": "AI Website Builders",
+    "tags": [
+      "ai-website-builders",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 63 is a powerful ai website builders for modern users.",
+    "link": "https://example.com/tool63",
+    "image": "https://example.com/images/tool63.png"
+  },
+  {
+    "id": "tool-64",
+    "name": "AI Tool 64",
+    "category": "Chatbot Tools",
+    "tags": [
+      "chatbot-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 64 is a powerful chatbot tools for modern users.",
+    "link": "https://example.com/tool64",
+    "image": "https://example.com/images/tool64.png"
+  },
+  {
+    "id": "tool-65",
+    "name": "AI Tool 65",
+    "category": "AI Avatars",
+    "tags": [
+      "ai-avatars",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 65 is a powerful ai avatars for modern users.",
+    "link": "https://example.com/tool65",
+    "image": "https://example.com/images/tool65.png"
+  },
+  {
+    "id": "tool-66",
+    "name": "AI Tool 66",
+    "category": "AI Music Tools",
+    "tags": [
+      "ai-music-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 66 is a powerful ai music tools for modern users.",
+    "link": "https://example.com/tool66",
+    "image": "https://example.com/images/tool66.png"
+  },
+  {
+    "id": "tool-67",
+    "name": "AI Tool 67",
+    "category": "AI Resume/Job Tools",
+    "tags": [
+      "ai-resume/job-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 67 is a powerful ai resume/job tools for modern users.",
+    "link": "https://example.com/tool67",
+    "image": "https://example.com/images/tool67.png"
+  },
+  {
+    "id": "tool-68",
+    "name": "AI Tool 68",
+    "category": "AI PDF Tools",
+    "tags": [
+      "ai-pdf-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 68 is a powerful ai pdf tools for modern users.",
+    "link": "https://example.com/tool68",
+    "image": "https://example.com/images/tool68.png"
+  },
+  {
+    "id": "tool-69",
+    "name": "AI Tool 69",
+    "category": "Social Media Tools",
+    "tags": [
+      "social-media-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 69 is a powerful social media tools for modern users.",
+    "link": "https://example.com/tool69",
+    "image": "https://example.com/images/tool69.png"
+  },
+  {
+    "id": "tool-70",
+    "name": "AI Tool 70",
+    "category": "Video Generator",
+    "tags": [
+      "video-generator",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 70 is a powerful video generator for modern users.",
+    "link": "https://example.com/tool70",
+    "image": "https://example.com/images/tool70.png"
+  },
+  {
+    "id": "tool-71",
+    "name": "AI Tool 71",
+    "category": "Image Generator",
+    "tags": [
+      "image-generator",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 71 is a powerful image generator for modern users.",
+    "link": "https://example.com/tool71",
+    "image": "https://example.com/images/tool71.png"
+  },
+  {
+    "id": "tool-72",
+    "name": "AI Tool 72",
+    "category": "Text to Video",
+    "tags": [
+      "text-to-video",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 72 is a powerful text to video for modern users.",
+    "link": "https://example.com/tool72",
+    "image": "https://example.com/images/tool72.png"
+  },
+  {
+    "id": "tool-73",
+    "name": "AI Tool 73",
+    "category": "Text Generator",
+    "tags": [
+      "text-generator",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 73 is a powerful text generator for modern users.",
+    "link": "https://example.com/tool73",
+    "image": "https://example.com/images/tool73.png"
+  },
+  {
+    "id": "tool-74",
+    "name": "AI Tool 74",
+    "category": "Voice AI",
+    "tags": [
+      "voice-ai",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 74 is a powerful voice ai for modern users.",
+    "link": "https://example.com/tool74",
+    "image": "https://example.com/images/tool74.png"
+  },
+  {
+    "id": "tool-75",
+    "name": "AI Tool 75",
+    "category": "Coding AI",
+    "tags": [
+      "coding-ai",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 75 is a powerful coding ai for modern users.",
+    "link": "https://example.com/tool75",
+    "image": "https://example.com/images/tool75.png"
+  },
+  {
+    "id": "tool-76",
+    "name": "AI Tool 76",
+    "category": "AI Presentation Tools",
+    "tags": [
+      "ai-presentation-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 76 is a powerful ai presentation tools for modern users.",
+    "link": "https://example.com/tool76",
+    "image": "https://example.com/images/tool76.png"
+  },
+  {
+    "id": "tool-77",
+    "name": "AI Tool 77",
+    "category": "AI Website Builders",
+    "tags": [
+      "ai-website-builders",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 77 is a powerful ai website builders for modern users.",
+    "link": "https://example.com/tool77",
+    "image": "https://example.com/images/tool77.png"
+  },
+  {
+    "id": "tool-78",
+    "name": "AI Tool 78",
+    "category": "Chatbot Tools",
+    "tags": [
+      "chatbot-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 78 is a powerful chatbot tools for modern users.",
+    "link": "https://example.com/tool78",
+    "image": "https://example.com/images/tool78.png"
+  },
+  {
+    "id": "tool-79",
+    "name": "AI Tool 79",
+    "category": "AI Avatars",
+    "tags": [
+      "ai-avatars",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 79 is a powerful ai avatars for modern users.",
+    "link": "https://example.com/tool79",
+    "image": "https://example.com/images/tool79.png"
+  },
+  {
+    "id": "tool-80",
+    "name": "AI Tool 80",
+    "category": "AI Music Tools",
+    "tags": [
+      "ai-music-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 80 is a powerful ai music tools for modern users.",
+    "link": "https://example.com/tool80",
+    "image": "https://example.com/images/tool80.png"
+  },
+  {
+    "id": "tool-81",
+    "name": "AI Tool 81",
+    "category": "AI Resume/Job Tools",
+    "tags": [
+      "ai-resume/job-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 81 is a powerful ai resume/job tools for modern users.",
+    "link": "https://example.com/tool81",
+    "image": "https://example.com/images/tool81.png"
+  },
+  {
+    "id": "tool-82",
+    "name": "AI Tool 82",
+    "category": "AI PDF Tools",
+    "tags": [
+      "ai-pdf-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 82 is a powerful ai pdf tools for modern users.",
+    "link": "https://example.com/tool82",
+    "image": "https://example.com/images/tool82.png"
+  },
+  {
+    "id": "tool-83",
+    "name": "AI Tool 83",
+    "category": "Social Media Tools",
+    "tags": [
+      "social-media-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 83 is a powerful social media tools for modern users.",
+    "link": "https://example.com/tool83",
+    "image": "https://example.com/images/tool83.png"
+  },
+  {
+    "id": "tool-84",
+    "name": "AI Tool 84",
+    "category": "Video Generator",
+    "tags": [
+      "video-generator",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 84 is a powerful video generator for modern users.",
+    "link": "https://example.com/tool84",
+    "image": "https://example.com/images/tool84.png"
+  },
+  {
+    "id": "tool-85",
+    "name": "AI Tool 85",
+    "category": "Image Generator",
+    "tags": [
+      "image-generator",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 85 is a powerful image generator for modern users.",
+    "link": "https://example.com/tool85",
+    "image": "https://example.com/images/tool85.png"
+  },
+  {
+    "id": "tool-86",
+    "name": "AI Tool 86",
+    "category": "Text to Video",
+    "tags": [
+      "text-to-video",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 86 is a powerful text to video for modern users.",
+    "link": "https://example.com/tool86",
+    "image": "https://example.com/images/tool86.png"
+  },
+  {
+    "id": "tool-87",
+    "name": "AI Tool 87",
+    "category": "Text Generator",
+    "tags": [
+      "text-generator",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 87 is a powerful text generator for modern users.",
+    "link": "https://example.com/tool87",
+    "image": "https://example.com/images/tool87.png"
+  },
+  {
+    "id": "tool-88",
+    "name": "AI Tool 88",
+    "category": "Voice AI",
+    "tags": [
+      "voice-ai",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 88 is a powerful voice ai for modern users.",
+    "link": "https://example.com/tool88",
+    "image": "https://example.com/images/tool88.png"
+  },
+  {
+    "id": "tool-89",
+    "name": "AI Tool 89",
+    "category": "Coding AI",
+    "tags": [
+      "coding-ai",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 89 is a powerful coding ai for modern users.",
+    "link": "https://example.com/tool89",
+    "image": "https://example.com/images/tool89.png"
+  },
+  {
+    "id": "tool-90",
+    "name": "AI Tool 90",
+    "category": "AI Presentation Tools",
+    "tags": [
+      "ai-presentation-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 90 is a powerful ai presentation tools for modern users.",
+    "link": "https://example.com/tool90",
+    "image": "https://example.com/images/tool90.png"
+  },
+  {
+    "id": "tool-91",
+    "name": "AI Tool 91",
+    "category": "AI Website Builders",
+    "tags": [
+      "ai-website-builders",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 91 is a powerful ai website builders for modern users.",
+    "link": "https://example.com/tool91",
+    "image": "https://example.com/images/tool91.png"
+  },
+  {
+    "id": "tool-92",
+    "name": "AI Tool 92",
+    "category": "Chatbot Tools",
+    "tags": [
+      "chatbot-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 92 is a powerful chatbot tools for modern users.",
+    "link": "https://example.com/tool92",
+    "image": "https://example.com/images/tool92.png"
+  },
+  {
+    "id": "tool-93",
+    "name": "AI Tool 93",
+    "category": "AI Avatars",
+    "tags": [
+      "ai-avatars",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 93 is a powerful ai avatars for modern users.",
+    "link": "https://example.com/tool93",
+    "image": "https://example.com/images/tool93.png"
+  },
+  {
+    "id": "tool-94",
+    "name": "AI Tool 94",
+    "category": "AI Music Tools",
+    "tags": [
+      "ai-music-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 94 is a powerful ai music tools for modern users.",
+    "link": "https://example.com/tool94",
+    "image": "https://example.com/images/tool94.png"
+  },
+  {
+    "id": "tool-95",
+    "name": "AI Tool 95",
+    "category": "AI Resume/Job Tools",
+    "tags": [
+      "ai-resume/job-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 95 is a powerful ai resume/job tools for modern users.",
+    "link": "https://example.com/tool95",
+    "image": "https://example.com/images/tool95.png"
+  },
+  {
+    "id": "tool-96",
+    "name": "AI Tool 96",
+    "category": "AI PDF Tools",
+    "tags": [
+      "ai-pdf-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 96 is a powerful ai pdf tools for modern users.",
+    "link": "https://example.com/tool96",
+    "image": "https://example.com/images/tool96.png"
+  },
+  {
+    "id": "tool-97",
+    "name": "AI Tool 97",
+    "category": "Social Media Tools",
+    "tags": [
+      "social-media-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 97 is a powerful social media tools for modern users.",
+    "link": "https://example.com/tool97",
+    "image": "https://example.com/images/tool97.png"
+  },
+  {
+    "id": "tool-98",
+    "name": "AI Tool 98",
+    "category": "Video Generator",
+    "tags": [
+      "video-generator",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 98 is a powerful video generator for modern users.",
+    "link": "https://example.com/tool98",
+    "image": "https://example.com/images/tool98.png"
+  },
+  {
+    "id": "tool-99",
+    "name": "AI Tool 99",
+    "category": "Image Generator",
+    "tags": [
+      "image-generator",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 99 is a powerful image generator for modern users.",
+    "link": "https://example.com/tool99",
+    "image": "https://example.com/images/tool99.png"
+  },
+  {
+    "id": "tool-100",
+    "name": "AI Tool 100",
+    "category": "Text to Video",
+    "tags": [
+      "text-to-video",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 100 is a powerful text to video for modern users.",
+    "link": "https://example.com/tool100",
+    "image": "https://example.com/images/tool100.png"
+  },
+  {
+    "id": "tool-101",
+    "name": "AI Tool 101",
+    "category": "Text Generator",
+    "tags": [
+      "text-generator",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 101 is a powerful text generator for modern users.",
+    "link": "https://example.com/tool101",
+    "image": "https://example.com/images/tool101.png"
+  },
+  {
+    "id": "tool-102",
+    "name": "AI Tool 102",
+    "category": "Voice AI",
+    "tags": [
+      "voice-ai",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 102 is a powerful voice ai for modern users.",
+    "link": "https://example.com/tool102",
+    "image": "https://example.com/images/tool102.png"
+  },
+  {
+    "id": "tool-103",
+    "name": "AI Tool 103",
+    "category": "Coding AI",
+    "tags": [
+      "coding-ai",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 103 is a powerful coding ai for modern users.",
+    "link": "https://example.com/tool103",
+    "image": "https://example.com/images/tool103.png"
+  },
+  {
+    "id": "tool-104",
+    "name": "AI Tool 104",
+    "category": "AI Presentation Tools",
+    "tags": [
+      "ai-presentation-tools",
+      "ai",
+      "tool"
+    ],
+    "description": "Tool 104 is a powerful ai presentation tools for modern users.",
+    "link": "https://example.com/tool104",
+    "image": "https://example.com/images/tool104.png"
   }
 ]
