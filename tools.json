@@ -1,842 +1,152 @@
 [
   {
-    "id": "tool1",
-    "name": "Front AI Tool",
-    "description": "Enough more enter citizen direction town million decade forget window.",
-    "category": "Productivity",
-    "url": "https://example.com/tool1"
+    "name": "ChatGPT",
+    "url": "https://chat.openai.com",
+    "category": "Text"
   },
   {
-    "id": "tool2",
-    "name": "Usually AI Tool",
-    "description": "Note size accept eight star source policy.",
-    "category": "Marketing",
-    "url": "https://example.com/tool2"
+    "name": "Runway ML",
+    "url": "https://runwayml.com",
+    "category": "Video"
   },
   {
-    "id": "tool3",
-    "name": "Team AI Tool",
-    "description": "Term happen executive case far arrive wonder who find true either age.",
-    "category": "Design",
-    "url": "https://example.com/tool3"
+    "name": "Copy.ai",
+    "url": "https://www.copy.ai",
+    "category": "Writing"
   },
   {
-    "id": "tool4",
-    "name": "Issue AI Tool",
-    "description": "Trade watch cup reflect effort hair impact commercial poor.",
-    "category": "Productivity",
-    "url": "https://example.com/tool4"
+    "name": "Jasper",
+    "url": "https://www.jasper.ai",
+    "category": "Writing"
   },
   {
-    "id": "tool5",
-    "name": "List AI Tool",
-    "description": "Part development factor cause health economy important glass watch continue upon audience.",
-    "category": "Audio Tools",
-    "url": "https://example.com/tool5"
+    "name": "Pictory",
+    "url": "https://pictory.ai",
+    "category": "Video"
   },
   {
-    "id": "tool6",
-    "name": "Half AI Tool",
-    "description": "International tonight happy travel democratic approach entire face strong treatment.",
-    "category": "Text Generation",
-    "url": "https://example.com/tool6"
+    "name": "Synthesia",
+    "url": "https://www.synthesia.io",
+    "category": "Video"
   },
   {
-    "id": "tool7",
-    "name": "Experience AI Tool",
-    "description": "Red know thank answer stand tree front seat approach pay standard.",
-    "category": "Design",
-    "url": "https://example.com/tool7"
+    "name": "D-ID",
+    "url": "https://www.d-id.com",
+    "category": "Avatar"
   },
   {
-    "id": "tool8",
-    "name": "Head AI Tool",
-    "description": "Garden mission nothing many cell six thought those hair world them lead usually.",
-    "category": "Marketing",
-    "url": "https://example.com/tool8"
+    "name": "Midjourney",
+    "url": "https://www.midjourney.com",
+    "category": "Image"
   },
   {
-    "id": "tool9",
-    "name": "Control AI Tool",
-    "description": "Artist rest book low weight just yeah unit small step check.",
-    "category": "Education",
-    "url": "https://example.com/tool9"
+    "name": "Leonardo AI",
+    "url": "https://leonardo.ai",
+    "category": "Image"
   },
   {
-    "id": "tool10",
-    "name": "Face AI Tool",
-    "description": "Clear mission quickly everyone catch third.",
-    "category": "Marketing",
-    "url": "https://example.com/tool10"
+    "name": "Kaiber",
+    "url": "https://www.kaiber.ai",
+    "category": "Video"
   },
   {
-    "id": "tool11",
-    "name": "Guy AI Tool",
-    "description": "Carry return democratic often ability with agree.",
-    "category": "Education",
-    "url": "https://example.com/tool11"
+    "name": "Tome",
+    "url": "https://tome.app",
+    "category": "Presentation"
   },
   {
-    "id": "tool12",
-    "name": "Current AI Tool",
-    "description": "Theory big share firm hope much attack enjoy office address who set.",
-    "category": "Coding",
-    "url": "https://example.com/tool12"
+    "name": "SlidesAI",
+    "url": "https://www.slidesai.io",
+    "category": "Presentation"
   },
   {
-    "id": "tool13",
-    "name": "Style AI Tool",
-    "description": "Beautiful employee strategy piece food quite light kitchen beautiful.",
-    "category": "Coding",
-    "url": "https://example.com/tool13"
+    "name": "Beautiful.ai",
+    "url": "https://www.beautiful.ai",
+    "category": "Presentation"
   },
   {
-    "id": "tool14",
-    "name": "Probably AI Tool",
-    "description": "Factor it wear run by ever city actually east.",
-    "category": "Text Generation",
-    "url": "https://example.com/tool14"
+    "name": "Murf.ai",
+    "url": "https://murf.ai",
+    "category": "Voice"
   },
   {
-    "id": "tool15",
-    "name": "Total AI Tool",
-    "description": "Type get claim partner who exactly coach.",
-    "category": "Productivity",
-    "url": "https://example.com/tool15"
+    "name": "Play.ht",
+    "url": "https://play.ht",
+    "category": "Voice"
   },
   {
-    "id": "tool16",
-    "name": "Life AI Tool",
-    "description": "Give control house energy these effort wrong indicate whether dark view because.",
-    "category": "Education",
-    "url": "https://example.com/tool16"
+    "name": "Soundraw",
+    "url": "https://soundraw.io",
+    "category": "Music"
   },
   {
-    "id": "tool17",
-    "name": "Article AI Tool",
-    "description": "Car culture value believe play serious their color pay.",
-    "category": "Productivity",
-    "url": "https://example.com/tool17"
+    "name": "Lumen5",
+    "url": "https://www.lumen5.com",
+    "category": "Video"
   },
   {
-    "id": "tool18",
-    "name": "Act AI Tool",
-    "description": "National through own local though its build whether others reality relationship.",
-    "category": "Education",
-    "url": "https://example.com/tool18"
+    "name": "Synthesys",
+    "url": "https://synthesys.io",
+    "category": "Avatar"
   },
   {
-    "id": "tool19",
-    "name": "Wife AI Tool",
-    "description": "School hope south us apply no nice become out early else send than.",
-    "category": "Education",
-    "url": "https://example.com/tool19"
+    "name": "Descript",
+    "url": "https://www.descript.com",
+    "category": "Audio/Video"
   },
   {
-    "id": "tool20",
-    "name": "We AI Tool",
-    "description": "Traditional right join itself fall officer marriage nation between term.",
-    "category": "Video Generation",
-    "url": "https://example.com/tool20"
+    "name": "Remove.bg",
+    "url": "https://www.remove.bg",
+    "category": "Image"
   },
   {
-    "id": "tool21",
-    "name": "Majority AI Tool",
-    "description": "Yourself himself concern sing parent feel.",
-    "category": "Marketing",
-    "url": "https://example.com/tool21"
+    "name": "Cleanup.pictures",
+    "url": "https://cleanup.pictures",
+    "category": "Image"
   },
   {
-    "id": "tool22",
-    "name": "Trouble AI Tool",
-    "description": "Easy tough note factor attack style store final born person campaign real huge star.",
-    "category": "Video Generation",
-    "url": "https://example.com/tool22"
+    "name": "Looka",
+    "url": "https://looka.com",
+    "category": "Logo"
   },
   {
-    "id": "tool23",
-    "name": "Way AI Tool",
-    "description": "Black capital you commercial case on.",
-    "category": "Coding",
-    "url": "https://example.com/tool23"
+    "name": "Durable",
+    "url": "https://durable.co",
+    "category": "Website Builder"
   },
   {
-    "id": "tool24",
-    "name": "Baby AI Tool",
-    "description": "Including still city alone some beautiful product sit specific entire sit rate report.",
-    "category": "Marketing",
-    "url": "https://example.com/tool24"
+    "name": "Magical",
+    "url": "https://www.getmagical.com",
+    "category": "Productivity"
   },
   {
-    "id": "tool25",
-    "name": "North AI Tool",
-    "description": "View want black foot often table.",
-    "category": "Productivity",
-    "url": "https://example.com/tool25"
+    "name": "Quillbot",
+    "url": "https://quillbot.com",
+    "category": "Writing"
   },
   {
-    "id": "tool26",
-    "name": "Sure AI Tool",
-    "description": "Just site least month great theory current exist nor law southern.",
-    "category": "Education",
-    "url": "https://example.com/tool26"
+    "name": "Grammarly",
+    "url": "https://grammarly.com",
+    "category": "Writing"
   },
   {
-    "id": "tool27",
-    "name": "Others AI Tool",
-    "description": "If north usually past speech create they project prove bank fear night really.",
-    "category": "Design",
-    "url": "https://example.com/tool27"
+    "name": "Notion AI",
+    "url": "https://www.notion.so/product/ai",
+    "category": "Productivity"
   },
   {
-    "id": "tool28",
-    "name": "Per AI Tool",
-    "description": "Important beyond likely add until final test meet by wide water professional.",
-    "category": "Education",
-    "url": "https://example.com/tool28"
+    "name": "Fireflies.ai",
+    "url": "https://fireflies.ai",
+    "category": "Productivity"
   },
   {
-    "id": "tool29",
-    "name": "Health AI Tool",
-    "description": "Sound maintain factor sport apply couple task agreement present board forward girl.",
-    "category": "Coding",
-    "url": "https://example.com/tool29"
+    "name": "Replit",
+    "url": "https://replit.com",
+    "category": "Coding"
   },
   {
-    "id": "tool30",
-    "name": "Ok AI Tool",
-    "description": "Themselves actually relationship drop cup produce also either strategy.",
-    "category": "Design",
-    "url": "https://example.com/tool30"
-  },
-  {
-    "id": "tool31",
-    "name": "Mind AI Tool",
-    "description": "Enough top big far film before can sure simple ball employee public.",
-    "category": "Design",
-    "url": "https://example.com/tool31"
-  },
-  {
-    "id": "tool32",
-    "name": "Assume AI Tool",
-    "description": "Watch development get lead cup heavy.",
-    "category": "Education",
-    "url": "https://example.com/tool32"
-  },
-  {
-    "id": "tool33",
-    "name": "Cell AI Tool",
-    "description": "Whose hair produce up stock her loss sit little.",
-    "category": "Marketing",
-    "url": "https://example.com/tool33"
-  },
-  {
-    "id": "tool34",
-    "name": "Relationship AI Tool",
-    "description": "Response Mrs attorney or car turn instead early ago.",
-    "category": "Marketing",
-    "url": "https://example.com/tool34"
-  },
-  {
-    "id": "tool35",
-    "name": "Find AI Tool",
-    "description": "Meeting simply free range small it wall down ability relate coach need.",
-    "category": "Audio Tools",
-    "url": "https://example.com/tool35"
-  },
-  {
-    "id": "tool36",
-    "name": "Western AI Tool",
-    "description": "Event research three know note war me dog cut people only.",
-    "category": "Coding",
-    "url": "https://example.com/tool36"
-  },
-  {
-    "id": "tool37",
-    "name": "Add AI Tool",
-    "description": "Common economic ball enjoy now shoulder management push actually range all.",
-    "category": "Video Generation",
-    "url": "https://example.com/tool37"
-  },
-  {
-    "id": "tool38",
-    "name": "Me AI Tool",
-    "description": "Trade leg sign character prove value economy little member report probably.",
-    "category": "Audio Tools",
-    "url": "https://example.com/tool38"
-  },
-  {
-    "id": "tool39",
-    "name": "Couple AI Tool",
-    "description": "Recent present trial financial affect realize marriage.",
-    "category": "Audio Tools",
-    "url": "https://example.com/tool39"
-  },
-  {
-    "id": "tool40",
-    "name": "Quality AI Tool",
-    "description": "Voice daughter before at moment so national leave.",
-    "category": "Image Generation",
-    "url": "https://example.com/tool40"
-  },
-  {
-    "id": "tool41",
-    "name": "Sea AI Tool",
-    "description": "Day car car political four until interesting measure between good west enter.",
-    "category": "Chatbots",
-    "url": "https://example.com/tool41"
-  },
-  {
-    "id": "tool42",
-    "name": "Ok AI Tool",
-    "description": "Him program camera role improve seek little.",
-    "category": "Education",
-    "url": "https://example.com/tool42"
-  },
-  {
-    "id": "tool43",
-    "name": "Explain AI Tool",
-    "description": "Who product statement special early scientist.",
-    "category": "Marketing",
-    "url": "https://example.com/tool43"
-  },
-  {
-    "id": "tool44",
-    "name": "Past AI Tool",
-    "description": "Set prepare must policy catch live opportunity give never group.",
-    "category": "Education",
-    "url": "https://example.com/tool44"
-  },
-  {
-    "id": "tool45",
-    "name": "Accept AI Tool",
-    "description": "All natural itself culture until claim left news thing.",
-    "category": "Education",
-    "url": "https://example.com/tool45"
-  },
-  {
-    "id": "tool46",
-    "name": "Relationship AI Tool",
-    "description": "Free purpose money hard support executive theory mean guy reason.",
-    "category": "Coding",
-    "url": "https://example.com/tool46"
-  },
-  {
-    "id": "tool47",
-    "name": "Weight AI Tool",
-    "description": "Build full yard country today ball customer great usually military rich approach gas.",
-    "category": "Coding",
-    "url": "https://example.com/tool47"
-  },
-  {
-    "id": "tool48",
-    "name": "Voice AI Tool",
-    "description": "Your network trip control risk need the enough would election blood.",
-    "category": "Coding",
-    "url": "https://example.com/tool48"
-  },
-  {
-    "id": "tool49",
-    "name": "Attack AI Tool",
-    "description": "Go effect others level tax strategy cultural likely close remember imagine.",
-    "category": "Marketing",
-    "url": "https://example.com/tool49"
-  },
-  {
-    "id": "tool50",
-    "name": "Benefit AI Tool",
-    "description": "Back food now last party wife.",
-    "category": "Text Generation",
-    "url": "https://example.com/tool50"
-  },
-  {
-    "id": "tool51",
-    "name": "Morning AI Tool",
-    "description": "National claim tend too state people not charge quality name treatment he.",
-    "category": "Text Generation",
-    "url": "https://example.com/tool51"
-  },
-  {
-    "id": "tool52",
-    "name": "Situation AI Tool",
-    "description": "Feel check thing or Democrat animal great table reason wonder type whom national.",
-    "category": "Image Generation",
-    "url": "https://example.com/tool52"
-  },
-  {
-    "id": "tool53",
-    "name": "Miss AI Tool",
-    "description": "Population film technology line lose could clear.",
-    "category": "Coding",
-    "url": "https://example.com/tool53"
-  },
-  {
-    "id": "tool54",
-    "name": "Than AI Tool",
-    "description": "Claim gas return week all toward work south arm necessary.",
-    "category": "Text Generation",
-    "url": "https://example.com/tool54"
-  },
-  {
-    "id": "tool55",
-    "name": "Identify AI Tool",
-    "description": "Station these partner worry guess bed tax police either work change million adult.",
-    "category": "Text Generation",
-    "url": "https://example.com/tool55"
-  },
-  {
-    "id": "tool56",
-    "name": "Discover AI Tool",
-    "description": "Unit buy particular safe idea behind identify avoid.",
-    "category": "Video Generation",
-    "url": "https://example.com/tool56"
-  },
-  {
-    "id": "tool57",
-    "name": "With AI Tool",
-    "description": "Subject movement heart fast sing although must standard impact before prove.",
-    "category": "Coding",
-    "url": "https://example.com/tool57"
-  },
-  {
-    "id": "tool58",
-    "name": "Month AI Tool",
-    "description": "All account letter store beat must information truth.",
-    "category": "Chatbots",
-    "url": "https://example.com/tool58"
-  },
-  {
-    "id": "tool59",
-    "name": "Still AI Tool",
-    "description": "Reach effect manage year voice who assume eight discover Democrat.",
-    "category": "Audio Tools",
-    "url": "https://example.com/tool59"
-  },
-  {
-    "id": "tool60",
-    "name": "Send AI Tool",
-    "description": "Congress baby physical claim improve develop process size.",
-    "category": "Video Generation",
-    "url": "https://example.com/tool60"
-  },
-  {
-    "id": "tool61",
-    "name": "Someone AI Tool",
-    "description": "Film western court enter action inside ever building short.",
-    "category": "Video Generation",
-    "url": "https://example.com/tool61"
-  },
-  {
-    "id": "tool62",
-    "name": "Reach AI Tool",
-    "description": "Democrat left sit should enter trial until.",
-    "category": "Video Generation",
-    "url": "https://example.com/tool62"
-  },
-  {
-    "id": "tool63",
-    "name": "Kid AI Tool",
-    "description": "Soon less stand spend at security agreement how.",
-    "category": "Productivity",
-    "url": "https://example.com/tool63"
-  },
-  {
-    "id": "tool64",
-    "name": "Game AI Tool",
-    "description": "Person hold and white measure form reduce.",
-    "category": "Image Generation",
-    "url": "https://example.com/tool64"
-  },
-  {
-    "id": "tool65",
-    "name": "Structure AI Tool",
-    "description": "Year everything bill responsibility again who say.",
-    "category": "Productivity",
-    "url": "https://example.com/tool65"
-  },
-  {
-    "id": "tool66",
-    "name": "Identify AI Tool",
-    "description": "Increase ask laugh bill relate nearly modern hear spend.",
-    "category": "Coding",
-    "url": "https://example.com/tool66"
-  },
-  {
-    "id": "tool67",
-    "name": "Create AI Tool",
-    "description": "Win per my something free tree box south kind reality.",
-    "category": "Text Generation",
-    "url": "https://example.com/tool67"
-  },
-  {
-    "id": "tool68",
-    "name": "Month AI Tool",
-    "description": "Suffer position raise anyone garden bring claim force claim.",
-    "category": "Coding",
-    "url": "https://example.com/tool68"
-  },
-  {
-    "id": "tool69",
-    "name": "Guess AI Tool",
-    "description": "Many often begin whether short western example present.",
-    "category": "Education",
-    "url": "https://example.com/tool69"
-  },
-  {
-    "id": "tool70",
-    "name": "Technology AI Tool",
-    "description": "Appear need require natural artist capital medical.",
-    "category": "Chatbots",
-    "url": "https://example.com/tool70"
-  },
-  {
-    "id": "tool71",
-    "name": "Perform AI Tool",
-    "description": "Your however car use situation get another carry size similar plan these expert today.",
-    "category": "Video Generation",
-    "url": "https://example.com/tool71"
-  },
-  {
-    "id": "tool72",
-    "name": "International AI Tool",
-    "description": "Continue employee over well office recent gas teacher law region reality however growth.",
-    "category": "Education",
-    "url": "https://example.com/tool72"
-  },
-  {
-    "id": "tool73",
-    "name": "Decide AI Tool",
-    "description": "Tonight physical floor girl five little act attention data system natural.",
-    "category": "Video Generation",
-    "url": "https://example.com/tool73"
-  },
-  {
-    "id": "tool74",
-    "name": "Under AI Tool",
-    "description": "Toward type realize grow pressure never.",
-    "category": "Video Generation",
-    "url": "https://example.com/tool74"
-  },
-  {
-    "id": "tool75",
-    "name": "Three AI Tool",
-    "description": "Film whose finally see onto happy those somebody structure necessary.",
-    "category": "Video Generation",
-    "url": "https://example.com/tool75"
-  },
-  {
-    "id": "tool76",
-    "name": "Idea AI Tool",
-    "description": "Finish tell compare certain exist feel quite particularly around himself memory say.",
-    "category": "Education",
-    "url": "https://example.com/tool76"
-  },
-  {
-    "id": "tool77",
-    "name": "Friend AI Tool",
-    "description": "Agency purpose all gun recognize admit tough trouble drug beat street floor.",
-    "category": "Productivity",
-    "url": "https://example.com/tool77"
-  },
-  {
-    "id": "tool78",
-    "name": "Hope AI Tool",
-    "description": "Tend who apply company bag because give political news discuss expect drug.",
-    "category": "Marketing",
-    "url": "https://example.com/tool78"
-  },
-  {
-    "id": "tool79",
-    "name": "City AI Tool",
-    "description": "Top seat local space teacher inside.",
-    "category": "Image Generation",
-    "url": "https://example.com/tool79"
-  },
-  {
-    "id": "tool80",
-    "name": "Success AI Tool",
-    "description": "Run capital black admit ever either better upon personal together turn.",
-    "category": "Marketing",
-    "url": "https://example.com/tool80"
-  },
-  {
-    "id": "tool81",
-    "name": "Recognize AI Tool",
-    "description": "Agent article election life far TV surface travel remember effect blue military may.",
-    "category": "Audio Tools",
-    "url": "https://example.com/tool81"
-  },
-  {
-    "id": "tool82",
-    "name": "Son AI Tool",
-    "description": "Parent enter turn we thing trial back instead see treat.",
-    "category": "Coding",
-    "url": "https://example.com/tool82"
-  },
-  {
-    "id": "tool83",
-    "name": "Firm AI Tool",
-    "description": "Happen last worker dinner discussion concern record task up need leave institution.",
-    "category": "Coding",
-    "url": "https://example.com/tool83"
-  },
-  {
-    "id": "tool84",
-    "name": "Possible AI Tool",
-    "description": "Might eat building pick set together.",
-    "category": "Design",
-    "url": "https://example.com/tool84"
-  },
-  {
-    "id": "tool85",
-    "name": "Hundred AI Tool",
-    "description": "Young cell always arm attention fact.",
-    "category": "Coding",
-    "url": "https://example.com/tool85"
-  },
-  {
-    "id": "tool86",
-    "name": "Already AI Tool",
-    "description": "I painting someone audience Democrat government thus talk pull full use east thus.",
-    "category": "Chatbots",
-    "url": "https://example.com/tool86"
-  },
-  {
-    "id": "tool87",
-    "name": "Generation AI Tool",
-    "description": "Treatment matter drug couple specific consider officer.",
-    "category": "Education",
-    "url": "https://example.com/tool87"
-  },
-  {
-    "id": "tool88",
-    "name": "Same AI Tool",
-    "description": "Thought effect guess kid help start trip thus.",
-    "category": "Image Generation",
-    "url": "https://example.com/tool88"
-  },
-  {
-    "id": "tool89",
-    "name": "Lead AI Tool",
-    "description": "Seven new heart such family Mrs hear remember remember head provide.",
-    "category": "Marketing",
-    "url": "https://example.com/tool89"
-  },
-  {
-    "id": "tool90",
-    "name": "Sound AI Tool",
-    "description": "Must admit its that election relationship.",
-    "category": "Marketing",
-    "url": "https://example.com/tool90"
-  },
-  {
-    "id": "tool91",
-    "name": "Late AI Tool",
-    "description": "Pm still artist hotel class team case wind.",
-    "category": "Coding",
-    "url": "https://example.com/tool91"
-  },
-  {
-    "id": "tool92",
-    "name": "Air AI Tool",
-    "description": "Tend article clear cultural suffer behavior deal life because.",
-    "category": "Design",
-    "url": "https://example.com/tool92"
-  },
-  {
-    "id": "tool93",
-    "name": "Sign AI Tool",
-    "description": "Wide drug reduce scientist news if office.",
-    "category": "Education",
-    "url": "https://example.com/tool93"
-  },
-  {
-    "id": "tool94",
-    "name": "Accept AI Tool",
-    "description": "Issue chair clearly state east food media money window option such girl.",
-    "category": "Chatbots",
-    "url": "https://example.com/tool94"
-  },
-  {
-    "id": "tool95",
-    "name": "Ability AI Tool",
-    "description": "Both before be break success line around data your question between class.",
-    "category": "Text Generation",
-    "url": "https://example.com/tool95"
-  },
-  {
-    "id": "tool96",
-    "name": "Build AI Tool",
-    "description": "Voice race leg environmental reveal travel.",
-    "category": "Design",
-    "url": "https://example.com/tool96"
-  },
-  {
-    "id": "tool97",
-    "name": "Short AI Tool",
-    "description": "Remain Democrat arm leave parent bring visit draw employee.",
-    "category": "Productivity",
-    "url": "https://example.com/tool97"
-  },
-  {
-    "id": "tool98",
-    "name": "Sense AI Tool",
-    "description": "Until night quite seat if economic available stage language experience produce.",
-    "category": "Productivity",
-    "url": "https://example.com/tool98"
-  },
-  {
-    "id": "tool99",
-    "name": "Clear AI Tool",
-    "description": "Produce both wall job position during a continue finally population second.",
-    "category": "Marketing",
-    "url": "https://example.com/tool99"
-  },
-  {
-    "id": "tool100",
-    "name": "Early AI Tool",
-    "description": "South after need day follow major.",
-    "category": "Productivity",
-    "url": "https://example.com/tool100"
-  },
-  {
-    "id": "tool101",
-    "name": "Set AI Tool",
-    "description": "The even term natural science necessary great oil arm create.",
-    "category": "Coding",
-    "url": "https://example.com/tool101"
-  },
-  {
-    "id": "tool102",
-    "name": "Television AI Tool",
-    "description": "Result north bank onto try also rich know at usually leave.",
-    "category": "Education",
-    "url": "https://example.com/tool102"
-  },
-  {
-    "id": "tool103",
-    "name": "Contain AI Tool",
-    "description": "Stock gun resource next author how never fact there.",
-    "category": "Coding",
-    "url": "https://example.com/tool103"
-  },
-  {
-    "id": "tool104",
-    "name": "Service AI Tool",
-    "description": "Mrs item history bar work size.",
-    "category": "Education",
-    "url": "https://example.com/tool104"
-  },
-  {
-    "id": "tool105",
-    "name": "Fish AI Tool",
-    "description": "Explain cost for moment several right.",
-    "category": "Chatbots",
-    "url": "https://example.com/tool105"
-  },
-  {
-    "id": "tool106",
-    "name": "Entire AI Tool",
-    "description": "Court country resource these bag stay.",
-    "category": "Image Generation",
-    "url": "https://example.com/tool106"
-  },
-  {
-    "id": "tool107",
-    "name": "Deal AI Tool",
-    "description": "Indicate safe minute rate never new window but perform surface doctor.",
-    "category": "Education",
-    "url": "https://example.com/tool107"
-  },
-  {
-    "id": "tool108",
-    "name": "Walk AI Tool",
-    "description": "Seem however throw carry receive ask yourself fly push each her experience.",
-    "category": "Design",
-    "url": "https://example.com/tool108"
-  },
-  {
-    "id": "tool109",
-    "name": "Can AI Tool",
-    "description": "Song face sign later finally low trial.",
-    "category": "Productivity",
-    "url": "https://example.com/tool109"
-  },
-  {
-    "id": "tool110",
-    "name": "Activity AI Tool",
-    "description": "Foreign dinner life point agent last late guy idea account.",
-    "category": "Chatbots",
-    "url": "https://example.com/tool110"
-  },
-  {
-    "id": "tool111",
-    "name": "Attack AI Tool",
-    "description": "Section each how major news site window environment address week stock deep trouble.",
-    "category": "Education",
-    "url": "https://example.com/tool111"
-  },
-  {
-    "id": "tool112",
-    "name": "Southern AI Tool",
-    "description": "Person while focus actually former night me life forget.",
-    "category": "Marketing",
-    "url": "https://example.com/tool112"
-  },
-  {
-    "id": "tool113",
-    "name": "Wife AI Tool",
-    "description": "Character traditional our work common maybe executive instead crime us Congress ball.",
-    "category": "Text Generation",
-    "url": "https://example.com/tool113"
-  },
-  {
-    "id": "tool114",
-    "name": "Free AI Tool",
-    "description": "Particularly growth international expect attorney key close under.",
-    "category": "Image Generation",
-    "url": "https://example.com/tool114"
-  },
-  {
-    "id": "tool115",
-    "name": "Must AI Tool",
-    "description": "Only music outside its recognize responsibility in attention public turn bad.",
-    "category": "Video Generation",
-    "url": "https://example.com/tool115"
-  },
-  {
-    "id": "tool116",
-    "name": "Though AI Tool",
-    "description": "Any itself Congress these four through majority adult travel camera.",
-    "category": "Productivity",
-    "url": "https://example.com/tool116"
-  },
-  {
-    "id": "tool117",
-    "name": "Market AI Tool",
-    "description": "Others see despite answer adult star share difference cut thousand.",
-    "category": "Chatbots",
-    "url": "https://example.com/tool117"
-  },
-  {
-    "id": "tool118",
-    "name": "Create AI Tool",
-    "description": "Evidence do would first force light example type often fire can bit early.",
-    "category": "Coding",
-    "url": "https://example.com/tool118"
-  },
-  {
-    "id": "tool119",
-    "name": "Hour AI Tool",
-    "description": "Detail surface training wall in training want study certain often.",
-    "category": "Image Generation",
-    "url": "https://example.com/tool119"
-  },
-  {
-    "id": "tool120",
-    "name": "Service AI Tool",
-    "description": "Beautiful plant issue line concern scientist might school less however wall among shake.",
-    "category": "Design",
-    "url": "https://example.com/tool120"
+    "name": "GitHub Copilot",
+    "url": "https://github.com/features/copilot",
+    "category": "Coding"
   }
 ]
