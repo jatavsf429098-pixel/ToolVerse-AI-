@@ -1,0 +1,26 @@
+[
+  {
+    "name": "ChatGPT",
+    "description": "Advanced AI chatbot that answers anything.",
+    "link": "https://chat.openai.com",
+    "category": "chatbot"
+  },
+  {
+    "name": "Jasper AI",
+    "description": "AI writing assistant for blogs and marketing.",
+    "link": "https://jasper.ai",
+    "category": "writing"
+  },
+  {
+    "name": "Runway ML",
+    "description": "Create and edit videos using AI.",
+    "link": "https://runwayml.com",
+    "category": "video"
+  },
+  {
+    "name": "Remove.bg",
+    "description": "Remove background from images instantly.",
+    "link": "https://remove.bg",
+    "category": "image"
+  }
+]

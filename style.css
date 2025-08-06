@@ -1,0 +1,65 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #2b2b2b;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header input, header select {
+  padding: 10px;
+  margin: 10px 5px;
+  width: 200px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: center;
+}
+
+.tool-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin: 10px;
+  padding: 20px;
+  width: 280px;
+  transition: 0.3s;
+}
+
+.tool-card:hover {
+  transform: scale(1.03);
+}
+
+.tool-card h3 {
+  margin: 0 0 10px;
+}
+
+.tool-card p {
+  font-size: 14px;
+  color: #444;
+}
+
+.tool-card button {
+  padding: 8px 14px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #222;
+  color: #fff;
+}
