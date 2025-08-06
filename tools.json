@@ -1,26 +1,20 @@
 [
   {
     "name": "ChatGPT",
-    "description": "Advanced AI chatbot that answers anything.",
+    "category": "Chatbot",
+    "description": "OpenAI’s powerful AI chatbot.",
     "link": "https://chat.openai.com",
-    "category": "chatbot"
+    "tags": ["chat", "AI", "NLP"],
+    "price": "Free",
+    "featured": true
   },
   {
-    "name": "Jasper AI",
-    "description": "AI writing assistant for blogs and marketing.",
-    "link": "https://jasper.ai",
-    "category": "writing"
-  },
-  {
-    "name": "Runway ML",
-    "description": "Create and edit videos using AI.",
-    "link": "https://runwayml.com",
-    "category": "video"
-  },
-  {
-    "name": "Remove.bg",
-    "description": "Remove background from images instantly.",
-    "link": "https://remove.bg",
-    "category": "image"
+    "name": "Copy.ai",
+    "category": "Writing",
+    "description": "AI tool for generating marketing copy.",
+    "link": "https://www.copy.ai",
+    "tags": ["writing", "marketing", "content"],
+    "price": "Freemium",
+    "featured": false
   }
 ]
