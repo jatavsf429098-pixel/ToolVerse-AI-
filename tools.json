@@ -1,152 +1,159 @@
 [
   {
     "name": "ChatGPT",
-    "url": "https://chat.openai.com",
-    "category": "Text"
+    "category": "AI Chatbot",
+    "description": "OpenAI’s powerful chatbot.",
+    "link": "https://chat.openai.com/",
+    "icon": "https://chat.openai.com/favicon.ico"
   },
   {
-    "name": "Runway ML",
-    "url": "https://runwayml.com",
-    "category": "Video"
-  },
-  {
-    "name": "Copy.ai",
-    "url": "https://www.copy.ai",
-    "category": "Writing"
-  },
-  {
-    "name": "Jasper",
-    "url": "https://www.jasper.ai",
-    "category": "Writing"
+    "name": "Canva AI",
+    "category": "Image Design",
+    "description": "AI-powered design tool.",
+    "link": "https://www.canva.com/ai",
+    "icon": "https://www.canva.com/favicon.ico"
   },
   {
     "name": "Pictory",
-    "url": "https://pictory.ai",
-    "category": "Video"
+    "category": "Video Generator",
+    "description": "Create short videos from long content.",
+    "link": "https://pictory.ai",
+    "icon": "https://pictory.ai/favicon.ico"
   },
   {
-    "name": "Synthesia",
-    "url": "https://www.synthesia.io",
-    "category": "Video"
+    "name": "Runway ML",
+    "category": "Video Editing",
+    "description": "AI video editor & generator.",
+    "link": "https://runwayml.com",
+    "icon": "https://runwayml.com/favicon.ico"
   },
   {
-    "name": "D-ID",
-    "url": "https://www.d-id.com",
-    "category": "Avatar"
+    "name": "Copy.ai",
+    "category": "Content Writing",
+    "description": "AI writing assistant.",
+    "link": "https://www.copy.ai",
+    "icon": "https://www.copy.ai/favicon.ico"
+  },
+  {
+    "name": "Jasper",
+    "category": "Content Writing",
+    "description": "Content writing AI for businesses.",
+    "link": "https://www.jasper.ai",
+    "icon": "https://www.jasper.ai/favicon.ico"
   },
   {
     "name": "Midjourney",
-    "url": "https://www.midjourney.com",
-    "category": "Image"
+    "category": "Image Generator",
+    "description": "AI art generator via Discord.",
+    "link": "https://www.midjourney.com",
+    "icon": "https://www.midjourney.com/favicon.ico"
   },
   {
-    "name": "Leonardo AI",
-    "url": "https://leonardo.ai",
-    "category": "Image"
+    "name": "DALL·E 2",
+    "category": "Image Generator",
+    "description": "Image creation by OpenAI.",
+    "link": "https://openai.com/dall-e",
+    "icon": "https://openai.com/favicon.ico"
   },
   {
-    "name": "Kaiber",
-    "url": "https://www.kaiber.ai",
-    "category": "Video"
-  },
-  {
-    "name": "Tome",
-    "url": "https://tome.app",
-    "category": "Presentation"
-  },
-  {
-    "name": "SlidesAI",
-    "url": "https://www.slidesai.io",
-    "category": "Presentation"
-  },
-  {
-    "name": "Beautiful.ai",
-    "url": "https://www.beautiful.ai",
-    "category": "Presentation"
-  },
-  {
-    "name": "Murf.ai",
-    "url": "https://murf.ai",
-    "category": "Voice"
-  },
-  {
-    "name": "Play.ht",
-    "url": "https://play.ht",
-    "category": "Voice"
-  },
-  {
-    "name": "Soundraw",
-    "url": "https://soundraw.io",
-    "category": "Music"
+    "name": "Synthesia",
+    "category": "AI Video",
+    "description": "Create AI videos with avatars.",
+    "link": "https://www.synthesia.io",
+    "icon": "https://www.synthesia.io/favicon.ico"
   },
   {
     "name": "Lumen5",
-    "url": "https://www.lumen5.com",
-    "category": "Video"
-  },
-  {
-    "name": "Synthesys",
-    "url": "https://synthesys.io",
-    "category": "Avatar"
-  },
-  {
-    "name": "Descript",
-    "url": "https://www.descript.com",
-    "category": "Audio/Video"
-  },
-  {
-    "name": "Remove.bg",
-    "url": "https://www.remove.bg",
-    "category": "Image"
-  },
-  {
-    "name": "Cleanup.pictures",
-    "url": "https://cleanup.pictures",
-    "category": "Image"
+    "category": "Video Creator",
+    "description": "Turn blog posts into videos.",
+    "link": "https://www.lumen5.com",
+    "icon": "https://www.lumen5.com/favicon.ico"
   },
   {
     "name": "Looka",
-    "url": "https://looka.com",
-    "category": "Logo"
+    "category": "Logo Maker",
+    "description": "AI-based logo generator.",
+    "link": "https://looka.com",
+    "icon": "https://looka.com/favicon.ico"
   },
   {
-    "name": "Durable",
-    "url": "https://durable.co",
-    "category": "Website Builder"
+    "name": "Fliki",
+    "category": "Text to Video",
+    "description": "Turn text into videos with voice.",
+    "link": "https://fliki.ai",
+    "icon": "https://fliki.ai/favicon.ico"
   },
   {
-    "name": "Magical",
-    "url": "https://www.getmagical.com",
-    "category": "Productivity"
+    "name": "Cleanup.pictures",
+    "category": "Photo Editor",
+    "description": "Remove unwanted objects from images.",
+    "link": "https://cleanup.pictures",
+    "icon": "https://cleanup.pictures/favicon.ico"
   },
   {
-    "name": "Quillbot",
-    "url": "https://quillbot.com",
-    "category": "Writing"
-  },
-  {
-    "name": "Grammarly",
-    "url": "https://grammarly.com",
-    "category": "Writing"
+    "name": "Remove.bg",
+    "category": "Photo Editor",
+    "description": "Remove image backgrounds in seconds.",
+    "link": "https://www.remove.bg",
+    "icon": "https://www.remove.bg/favicon.ico"
   },
   {
     "name": "Notion AI",
-    "url": "https://www.notion.so/product/ai",
-    "category": "Productivity"
+    "category": "Productivity",
+    "description": "AI inside Notion for productivity.",
+    "link": "https://www.notion.so/product/ai",
+    "icon": "https://www.notion.so/images/favicon.ico"
   },
   {
-    "name": "Fireflies.ai",
-    "url": "https://fireflies.ai",
-    "category": "Productivity"
+    "name": "Tome",
+    "category": "Presentation",
+    "description": "AI-powered storytelling tool.",
+    "link": "https://tome.app",
+    "icon": "https://tome.app/favicon.ico"
   },
   {
-    "name": "Replit",
-    "url": "https://replit.com",
-    "category": "Coding"
+    "name": "Descript",
+    "category": "Audio/Video Editor",
+    "description": "Edit videos by editing text.",
+    "link": "https://www.descript.com",
+    "icon": "https://www.descript.com/favicon.ico"
   },
   {
-    "name": "GitHub Copilot",
-    "url": "https://github.com/features/copilot",
-    "category": "Coding"
+    "name": "Durable",
+    "category": "Website Builder",
+    "description": "Create websites in 30 seconds.",
+    "link": "https://durable.co",
+    "icon": "https://durable.co/favicon.ico"
+  },
+  {
+    "name": "Beautiful.ai",
+    "category": "Presentation",
+    "description": "Smart slide deck creator.",
+    "link": "https://www.beautiful.ai",
+    "icon": "https://www.beautiful.ai/favicon.ico"
+  },
+  {
+    "name": "SlidesAI",
+    "category": "Presentation",
+    "description": "AI-generated Google Slides.",
+    "link": "https://www.slidesai.io",
+    "icon": "https://www.slidesai.io/favicon.ico"
+  },
+
+  // Dummy tools (replace with real ones later)
+  {
+    "name": "AI Tool 21",
+    "category": "Various",
+    "description": "Description for AI Tool 21.",
+    "link": "https://example.com/aitool21",
+    "icon": "https://example.com/favicon.ico"
+  },
+  {
+    "name": "AI Tool 22",
+    "category": "Various",
+    "description": "Description for AI Tool 22.",
+    "link": "https://example.com/aitool22",
+    "icon": "https://example.com/favicon.ico"
   }
+  // ... repeat till "AI Tool 100"
 ]
