@@ -10,12 +10,20 @@
 <body>
   <header class="header">
     <div class="container">
-      <h1>🚀 ToolVerse <span>AI</span></h1>
+      <div class="header-top">
+        <h1>🚀 ToolVerse <span>AI</span></h1>
+        <button id="themeToggle" title="Toggle Dark/Light">🌓</button>
+      </div>
       <p class="subtitle">Discover 100+ handpicked AI tools for everything from writing to video generation.</p>
       <div class="search-container">
         <input type="text" id="searchInput" placeholder="🔍 Search AI tools..." />
         <select id="categoryFilter">
           <option value="all">All Categories</option>
+        </select>
+        <select id="languageSelect">
+          <option value="en">🌐 English</option>
+          <option value="hi">🇮🇳 Hindi</option>
+          <option value="es">🇪🇸 Spanish</option>
         </select>
       </div>
     </div>
@@ -24,8 +32,20 @@
   <main class="main">
     <div class="container">
       <div id="tool-list" class="tool-grid"></div>
+      <div id="pagination" class="pagination-controls"></div>
     </div>
   </main>
+
+  <div id="toolModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-button" id="closeModal">×</span>
+      <h2 id="modalTitle">Tool Name</h2>
+      <p id="modalDescription">Tool Description</p>
+      <p><strong>Category:</strong> <span id="modalCategory"></span></p>
+      <p><strong>Tags:</strong> <span id="modalTags"></span></p>
+      <a id="modalVisit" href="#" target="_blank">🔗 Visit Tool</a>
+    </div>
+  </div>
 
   <footer class="footer">
     <div class="container">
