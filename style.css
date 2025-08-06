@@ -1,12 +1,30 @@
-/* General styles */
+/* General Styles */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   background: #f5f5f5;
   color: #333;
+  transition: background 0.3s, color 0.3s;
 }
 
-/* Header */
+.dark-mode {
+  background: #121212;
+  color: #f1f1f1;
+}
+
+.dark-mode .tool-card {
+  background: #1e1e1e;
+  box-shadow: 0 4px 12px rgba(255,255,255,0.05);
+}
+
+.dark-mode .tool-card a {
+  color: #60a5fa;
+}
+
+.dark-mode .tool-card a:hover {
+  color: #3b82f6;
+}
+
 .header {
   background: linear-gradient(90deg, #3b82f6, #6366f1);
   color: white;
@@ -37,7 +55,9 @@ body {
 }
 
 .search-container input,
-.search-container select {
+.search-container select,
+button,
+textarea {
   padding: 12px 15px;
   border-radius: 8px;
   border: none;
@@ -47,7 +67,17 @@ body {
   max-width: 100%;
 }
 
-/* Tool Grid */
+button {
+  background: #3b82f6;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #2563eb;
+}
+
 .tool-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -62,6 +92,7 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
 }
 
 .tool-card:hover {
@@ -69,10 +100,22 @@ body {
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-.tool-card h3 {
-  margin-top: 0;
+.tool-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fav-btn {
   font-size: 1.3rem;
-  color: #111;
+  cursor: pointer;
+  color: gold;
+  user-select: none;
+}
+
+.tool-card h3 {
+  margin: 0;
+  font-size: 1.3rem;
 }
 
 .tool-card p {
@@ -92,6 +135,21 @@ body {
   color: #1e40af;
 }
 
+/* Scroll To Top */
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #3b82f6;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 50%;
+  font-size: 20px;
+  border: none;
+  display: none;
+  z-index: 999;
+}
+
 /* Footer */
 .footer {
   background: #111827;
@@ -103,6 +161,56 @@ body {
 
 .footer strong {
   color: #60a5fa;
+}
+
+/* Submit Tool Form */
+.submit-tool-form {
+  background: #ffffff;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.submit-tool-form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: 500;
+}
+
+.submit-tool-form input,
+.submit-tool-form textarea,
+.submit-tool-form select {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Tool Actions */
+.tool-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Language/Dark Mode */
+.utility-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  background: #e5e7eb;
+}
+
+.dark-mode .utility-bar {
+  background: #1f2937;
+}
+
+.utility-bar select {
+  width: auto;
 }
 
 /* Responsive */
@@ -120,5 +228,10 @@ body {
   .search-container select {
     width: 100%;
     max-width: 90%;
+  }
+
+  .tool-actions {
+    flex-direction: column;
+    align-items: center;
   }
 }
