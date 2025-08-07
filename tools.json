@@ -1,50 +1,51 @@
+
 [
-  {
-    "name": "Pinterest Video Downloader",
-    "url": "https://pindown.io/",
-    "color": "#5e60ce",
-    "background": "#ffffff"
-  },
   {
     "name": "Instagram Video Downloader",
     "url": "https://vd6s.com/en/",
-    "color": "#228be6",
-    "background": "#ffffff"
+    "description": "Download Instagram videos easily.",
+    "category": "Video Downloader"
   },
   {
-    "name": "FastDL - Multi-platform Downloader",
+    "name": "Pinterest Video Downloader",
+    "url": "https://pindown.io/",
+    "description": "Download Pinterest videos quickly.",
+    "category": "Video Downloader"
+  },
+  {
+    "name": "Fast Video Downloader",
     "url": "https://fastdl.app/en",
-    "color": "#343a40",
-    "background": "#f8f9fa"
+    "description": "A fast and simple downloader.",
+    "category": "Video Downloader"
   },
   {
-    "name": "ElevenLabs - AI Voice Generator",
+    "name": "ElevenLabs",
     "url": "https://www.elevenlabs.io/",
-    "color": "#7928ca",
-    "background": "#fefefe"
+    "description": "AI voice generator.",
+    "category": "AI Voice"
   },
   {
-    "name": "PlayHT - AI Voiceover",
+    "name": "Play.ht",
     "url": "https://play.ht/",
-    "color": "#ff6600",
-    "background": "#ffffff"
+    "description": "Text to speech AI tool.",
+    "category": "AI Voice"
   },
   {
-    "name": "Pika Labs - AI Video Generator",
+    "name": "Pika Labs",
     "url": "https://www.pika.art/",
-    "color": "#0096c7",
-    "background": "#ffffff"
+    "description": "AI video generation tool.",
+    "category": "AI Video"
   },
   {
-    "name": "Leonardo AI - Image Generator",
+    "name": "Leonardo AI",
     "url": "https://leonardo.ai/",
-    "color": "#2a9d8f",
-    "background": "#fefefe"
+    "description": "AI image generation tool.",
+    "category": "AI Image"
   },
   {
-    "name": "Synthesia - AI Video Avatars",
+    "name": "Synthesia",
     "url": "https://www.synthesia.io/",
-    "color": "#264653",
-    "background": "#ffffff"
+    "description": "Create AI avatars and videos.",
+    "category": "AI Video"
   }
 ]
