@@ -1,51 +1,50 @@
-
 [
   {
     "name": "Instagram Video Downloader",
     "url": "https://vd6s.com/en/",
-    "description": "Download Instagram videos easily.",
+    "description": "Download Instagram videos easily by pasting the URL. Fast and free tool.",
     "category": "Video Downloader"
   },
   {
     "name": "Pinterest Video Downloader",
     "url": "https://pindown.io/",
-    "description": "Download Pinterest videos quickly.",
+    "description": "Download Pinterest videos and images quickly with this simple online tool.",
     "category": "Video Downloader"
   },
   {
-    "name": "Fast Video Downloader",
+    "name": "FastDL - All Video Downloader",
     "url": "https://fastdl.app/en",
-    "description": "A fast and simple downloader.",
+    "description": "Download videos from Instagram, TikTok, Facebook and more using FastDL.",
     "category": "Video Downloader"
   },
   {
-    "name": "ElevenLabs",
+    "name": "ElevenLabs - AI Voice Generator",
     "url": "https://www.elevenlabs.io/",
-    "description": "AI voice generator.",
-    "category": "AI Voice"
+    "description": "Create realistic voiceovers using AI voices for storytelling, videos, and narration.",
+    "category": "AI Voice Generator"
   },
   {
-    "name": "Play.ht",
+    "name": "PlayHT - Text to Speech",
     "url": "https://play.ht/",
-    "description": "Text to speech AI tool.",
-    "category": "AI Voice"
+    "description": "Generate lifelike text-to-speech voiceovers using advanced AI technology.",
+    "category": "AI Voice Generator"
   },
   {
-    "name": "Pika Labs",
+    "name": "Pika Labs - AI Video Generator",
     "url": "https://www.pika.art/",
-    "description": "AI video generation tool.",
-    "category": "AI Video"
+    "description": "Create videos from text prompts using Pika’s AI-powered video generation platform.",
+    "category": "AI Video Generator"
   },
   {
-    "name": "Leonardo AI",
+    "name": "Leonardo AI - Image Generator",
     "url": "https://leonardo.ai/",
-    "description": "AI image generation tool.",
-    "category": "AI Image"
+    "description": "Generate detailed AI artwork and designs using prompts with Leonardo AI.",
+    "category": "AI Image Generator"
   },
   {
-    "name": "Synthesia",
+    "name": "Synthesia - AI Video Avatar",
     "url": "https://www.synthesia.io/",
-    "description": "Create AI avatars and videos.",
-    "category": "AI Video"
+    "description": "Create professional videos from text using AI avatars and voices.",
+    "category": "AI Video Generator"
   }
 ]
