@@ -1,51 +1,50 @@
 [
   {
-    "name": "ChatGPT",
-    "description": "An advanced AI chatbot developed by OpenAI.",
-    "link": "https://chat.openai.com",
-    "category": "AI Chatbot",
-    "tags": ["chatbot", "AI", "OpenAI", "text"]
+    "name": "Pinterest Video Downloader",
+    "url": "https://pindown.io/",
+    "color": "#5e60ce",
+    "background": "#ffffff"
   },
   {
-    "name": "Canva",
-    "description": "Design anything from logos to videos with ease.",
-    "link": "https://www.canva.com",
-    "category": "Design",
-    "tags": ["design", "graphics", "logo", "video"]
+    "name": "Instagram Video Downloader",
+    "url": "https://vd6s.com/en/",
+    "color": "#228be6",
+    "background": "#ffffff"
   },
   {
-    "name": "Remove.bg",
-    "description": "Remove background from any image automatically.",
-    "link": "https://www.remove.bg",
-    "category": "Image Editing",
-    "tags": ["image", "background", "AI", "edit"]
+    "name": "FastDL - Multi-platform Downloader",
+    "url": "https://fastdl.app/en",
+    "color": "#343a40",
+    "background": "#f8f9fa"
   },
   {
-    "name": "Copy.ai",
-    "description": "Generate marketing copy using AI.",
-    "link": "https://www.copy.ai",
-    "category": "Content Writing",
-    "tags": ["writing", "AI", "copy", "marketing"]
+    "name": "ElevenLabs - AI Voice Generator",
+    "url": "https://www.elevenlabs.io/",
+    "color": "#7928ca",
+    "background": "#fefefe"
   },
   {
-    "name": "Krisp",
-    "description": "Remove background noise in real-time during calls.",
-    "link": "https://krisp.ai",
-    "category": "Productivity",
-    "tags": ["audio", "call", "noise", "remote"]
+    "name": "PlayHT - AI Voiceover",
+    "url": "https://play.ht/",
+    "color": "#ff6600",
+    "background": "#ffffff"
   },
   {
-    "name": "Runway ML",
-    "description": "AI tools for video, image, and creative workflows.",
-    "link": "https://runwayml.com",
-    "category": "Video Editing",
-    "tags": ["AI", "video", "generation", "creative"]
+    "name": "Pika Labs - AI Video Generator",
+    "url": "https://www.pika.art/",
+    "color": "#0096c7",
+    "background": "#ffffff"
   },
   {
-    "name": "Notion AI",
-    "description": "AI integrated into Notion for productivity and writing.",
-    "link": "https://www.notion.so/product/ai",
-    "category": "Productivity",
-    "tags": ["notes", "writing", "tasks", "ai"]
+    "name": "Leonardo AI - Image Generator",
+    "url": "https://leonardo.ai/",
+    "color": "#2a9d8f",
+    "background": "#fefefe"
+  },
+  {
+    "name": "Synthesia - AI Video Avatars",
+    "url": "https://www.synthesia.io/",
+    "color": "#264653",
+    "background": "#ffffff"
   }
 ]
