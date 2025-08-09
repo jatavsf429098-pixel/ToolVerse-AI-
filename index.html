@@ -1,22 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ToolVerse AI - All Tools in One</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ToolVerse AI — AI Tools & Resources</title>
+
+  <!-- Link to stylesheet -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Defer JS so DOM is ready; script.js will fetch tools.json -->
   <script defer src="script.js"></script>
 </head>
 <body>
-  <header>
-    <h1>ToolVerse AI</h1>
-    <input type="text" id="search" placeholder="Search for tools...">
+  <!-- Header with visible background (CSS controls the image) -->
+  <header class="site-header">
+    <div class="header-inner container">
+      <div class="brand">
+        <h1>ToolVerse <span>AI</span></h1>
+        <p class="tagline" data-i18n="tagline">Discover the best AI tools for video, image, audio, and more.</p>
+      </div>
+
+      <div class="controls">
+        <div class="search-wrap">
+          <input id="searchInput" type="search" placeholder="Search tools, categories, names..." aria-label="Search tools" />
+        </div>
+
+        <div class="selectors">
+          <select id="categorySelect" aria-label="Filter by category">
+            <option value="all" data-i18n="all">All Categories</option>
+          </select>
+
+          <select id="langSelect" aria-label="Select language">
+            <option value="en">English</option>
+            <option value="hi">हिंदी</option>
+          </select>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <main id="tool-container"></main>
+  <!-- Main content -->
+  <main class="container main">
+    <!-- Prominent quick-links (the 3 requested sites) -->
+    <section class="prominent-links" aria-labelledby="prominent-title">
+      <h2 id="prominent-title" data-i18n="popular">Prominent AI Sites</h2>
+      <div id="prominentGrid" class="grid"></div>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 ToolVerse AI. All rights reserved.</p>
+    <!-- Featured lists -->
+    <section class="featured" aria-labelledby="featured-title">
+      <h2 id="featured-title" data-i18n="featured">Featured Top Lists</h2>
+
+      <div class="lists-grid">
+        <div class="list-card" id="topVideoGen">
+          <h3 data-i18n="top5_video_gen">Top 5 Video Generation Websites</h3>
+          <ul class="resource-list" id="list-video-gen"></ul>
+        </div>
+
+        <div class="list-card" id="topImageToVideo">
+          <h3 data-i18n="top5_img2vid">Top 5 Image → Video Websites</h3>
+          <ul class="resource-list" id="list-img2vid"></ul>
+        </div>
+
+        <div class="list-card" id="topTextToVoice">
+          <h3 data-i18n="top5_text2voice">Top 5 Text → Voice Websites</h3>
+          <ul class="resource-list" id="list-text2voice"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- All resources (JSON-driven) -->
+    <section class="all-resources" aria-labelledby="all-title">
+      <h2 id="all-title" data-i18n="all_resources">All Resources</h2>
+      <div id="toolsGrid" class="grid"></div>
+    </section>
+
+    <!-- Small note / instructions -->
+    <section class="note">
+      <p data-i18n="note">Tip: Use the search box and category selector to quickly find tools. Add new links by editing <code>tools.json</code>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 ToolVerse AI • Built by You</p>
+    </div>
   </footer>
 </body>
 </html>
