@@ -1,89 +1,87 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ToolVerse AI — AI Tools & Resources</title>
+  <title>ToolVerse AI — AI Tools Directory</title>
 
-  <!-- Link to stylesheet -->
+  <!-- styles -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Defer JS so DOM is ready; script.js will fetch tools.json -->
+  <!-- script (deferred so DOM ready) -->
   <script defer src="script.js"></script>
 </head>
 <body>
-  <!-- Header with visible background (CSS controls the image) -->
+  <!-- HEADER -->
   <header class="site-header">
-    <div class="header-inner container">
+    <div class="overlay"></div>
+    <div class="container header-inner">
       <div class="brand">
         <h1>ToolVerse <span>AI</span></h1>
-        <p class="tagline" data-i18n="tagline">Discover the best AI tools for video, image, audio, and more.</p>
+        <p class="tagline" data-i18n="tagline">Discover the best AI tools — video, image, voice, writing and more.</p>
       </div>
 
       <div class="controls">
-        <div class="search-wrap">
-          <input id="searchInput" type="search" placeholder="Search tools, categories, names..." aria-label="Search tools" />
+        <div class="search">
+          <input id="searchInput" type="search" placeholder="Search tools, categories, tags..." aria-label="Search tools">
         </div>
 
-        <div class="selectors">
+        <div class="selects">
           <select id="categorySelect" aria-label="Filter by category">
             <option value="all" data-i18n="all">All Categories</option>
           </select>
 
           <select id="langSelect" aria-label="Select language">
             <option value="en">English</option>
-            <option value="hi">हिंदी</option>
+            <option value="hi">हिन्दी</option>
           </select>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Main content -->
-  <main class="container main">
-    <!-- Prominent quick-links (the 3 requested sites) -->
-    <section class="prominent-links" aria-labelledby="prominent-title">
-      <h2 id="prominent-title" data-i18n="popular">Prominent AI Sites</h2>
-      <div id="prominentGrid" class="grid"></div>
+  <!-- MAIN -->
+  <main class="container main-content" id="app">
+    <!-- Prominent special links -->
+    <section class="section">
+      <h2 data-i18n="prominent">Special / Prominent Links</h2>
+      <div id="prominentGrid" class="grid prominent-grid"></div>
     </section>
 
-    <!-- Featured lists -->
-    <section class="featured" aria-labelledby="featured-title">
-      <h2 id="featured-title" data-i18n="featured">Featured Top Lists</h2>
-
-      <div class="lists-grid">
-        <div class="list-card" id="topVideoGen">
-          <h3 data-i18n="top5_video_gen">Top 5 Video Generation Websites</h3>
-          <ul class="resource-list" id="list-video-gen"></ul>
+    <!-- Top 5 lists -->
+    <section class="section">
+      <h2 data-i18n="featured">Featured Top Lists</h2>
+      <div class="grid top-lists">
+        <div class="card list-card">
+          <h3 data-i18n="top5_video_gen">Top 5 Video Generator Websites</h3>
+          <ul id="topVideoGen" class="resource-list"></ul>
         </div>
-
-        <div class="list-card" id="topImageToVideo">
+        <div class="card list-card">
           <h3 data-i18n="top5_img2vid">Top 5 Image → Video Websites</h3>
-          <ul class="resource-list" id="list-img2vid"></ul>
+          <ul id="topImg2Vid" class="resource-list"></ul>
         </div>
-
-        <div class="list-card" id="topTextToVoice">
+        <div class="card list-card">
           <h3 data-i18n="top5_text2voice">Top 5 Text → Voice Websites</h3>
-          <ul class="resource-list" id="list-text2voice"></ul>
+          <ul id="topText2Voice" class="resource-list"></ul>
         </div>
       </div>
     </section>
 
-    <!-- All resources (JSON-driven) -->
-    <section class="all-resources" aria-labelledby="all-title">
-      <h2 id="all-title" data-i18n="all_resources">All Resources</h2>
-      <div id="toolsGrid" class="grid"></div>
+    <!-- All resources -->
+    <section class="section">
+      <h2 data-i18n="all_resources">All AI Tools</h2>
+      <div id="toolsGrid" class="grid tools-grid"></div>
     </section>
 
-    <!-- Small note / instructions -->
-    <section class="note">
-      <p data-i18n="note">Tip: Use the search box and category selector to quickly find tools. Add new links by editing <code>tools.json</code>.</p>
+    <section class="section small">
+      <p class="note" data-i18n="note">Tip: Edit <code>tools.json</code> to add or update tools. Use the search and filters to find tools quickly.</p>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2025 ToolVerse AI • Built by You</p>
+      <p>&copy; 2025 ToolVerse AI • Built with ❤️ for AI explorers</p>
     </div>
   </footer>
 </body>
