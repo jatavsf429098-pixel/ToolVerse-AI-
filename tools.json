@@ -3,84 +3,97 @@
     "name": "PinDown",
     "url": "https://pindown.io/",
     "description": "Fast Pinterest video & image downloader — paste a pin URL to get media files.",
-    "category": "Video Downloader",
-    "tags": ["pinterest","video","download"]
+    "category": "Downloader",
+    "tags": ["download","pinterest"]
   },
   {
     "name": "FastDL",
     "url": "https://fastdl.app/en",
-    "description": "Universal downloader for multiple social platforms (Instagram, TikTok, etc.).",
-    "category": "Video Downloader",
-    "tags": ["download","instagram","tiktok","video"]
+    "description": "Universal downloader for multiple social platforms (Instagram, TikTok, Facebook).",
+    "category": "Downloader",
+    "tags": ["download","social"]
   },
   {
     "name": "VD6S",
-    "url": "https://vd6s.com/en/",
+    "url": "https://vd6s.com/en",
     "description": "Download Instagram reels and videos quickly.",
-    "category": "Video Downloader",
-    "tags": ["instagram","download","reels"]
+    "category": "Downloader",
+    "tags": ["download","instagram"]
   },
-  {
-    "name": "ElevenLabs",
-    "url": "https://www.elevenlabs.io/",
-    "description": "Realistic AI voice generation and voice cloning.",
-    "category": "AI Voice Generator",
-    "tags": ["voice","tts","ai","speech"]
-  },
-  {
-    "name": "Play.ht",
-    "url": "https://play.ht/",
-    "description": "Text-to-speech platform for natural voiceovers.",
-    "category": "AI Voice Generator",
-    "tags": ["tts","voice","audio"]
-  },
-  {
-    "name": "Pika Labs",
-    "url": "https://www.pika.art/",
-    "description": "Turn prompts into short AI-generated videos and experiments.",
-    "category": "AI Video Generator",
-    "tags": ["video-gen","ai","animation"]
-  },
-  {
-    "name": "Leonardo AI",
-    "url": "https://leonardo.ai/",
-    "description": "Highly customizable AI image generator for artists and game devs.",
-    "category": "AI Image Generator",
-    "tags": ["image","generation","ai"]
-  },
-  {
-    "name": "Synthesia",
-    "url": "https://www.synthesia.io/",
-    "description": "Create AI avatar videos from text (great for tutorials & marketing).",
-    "category": "AI Video Generator",
-    "tags": ["video-gen","avatar","ai"]
-  },
-  {
-    "name": "Runway ML",
-    "url": "https://runwayml.com/",
-    "description": "End-to-end creative tools for video & image generation.",
-    "category": "AI Video Generator",
-    "tags": ["video","ai","creative"]
-  },
-  {
-    "name": "ChatGPT",
-    "url": "https://chat.openai.com/",
-    "description": "Conversational AI by OpenAI—chat, code, brainstorm, and more.",
-    "category": "Chatbot",
-    "tags": ["chat","assistant","openai"]
-  },
-  {
-    "name": "Canva",
-    "url": "https://www.canva.com/",
-    "description": "Design tool with templates and AI features for social content.",
-    "category": "Design",
-    "tags": ["design","graphics","social"]
-  },
-  {
-    "name": "Copy.ai",
-    "url": "https://www.copy.ai/",
-    "description": "AI copywriting assistant for ads, blogs, and social posts.",
-    "category": "Writing",
-    "tags": ["writing","marketing","copy"]
-  }
+
+  { "name": "Perplexity", "url": "https://www.perplexity.ai/", "description": "AI-powered answer engine and research assistant.", "category": "Chatbot/Research", "tags": ["chat","research"] },
+  { "name": "GitHub Copilot", "url": "https://copilot.microsoft.com/", "description": "AI coding assistant integrated with IDEs.", "category": "Developer Tools", "tags": ["code","assistant"] },
+  { "name": "Claude", "url": "https://claude.ai/", "description": "Anthropic's conversational AI assistant.", "category": "Chatbot", "tags": ["chat","assistant"] },
+  { "name": "Gemini", "url": "https://gemini.google.com/", "description": "Google's advanced multimodal model and assistant.", "category": "Chatbot", "tags": ["chat","multimodal"] },
+
+  { "name": "HeyGen", "url": "https://www.heygen.com/", "description": "Create realistic talking avatars and videos from text.", "category": "AI Video Generator", "tags": ["video-gen","avatar"] },
+  { "name": "Synthesia", "url": "https://www.synthesia.io/", "description": "Create AI videos with avatars and voiceovers.", "category": "AI Video Generator", "tags": ["video-gen","avatar"] },
+  { "name": "Pika Labs", "url": "https://pika.art/", "description": "AI experiments for generating short videos and motion.", "category": "AI Video Generator", "tags": ["video-gen","img2vid"] },
+  { "name": "Runway", "url": "https://runwayml.com/", "description": "Creative suite: text-to-video, editing and VFX AI tools.", "category": "AI Video/Creative", "tags": ["video-gen","creative"] },
+  { "name": "Ideogram", "url": "https://ideogram.ai/", "description": "Text to image generator with strong art styles.", "category": "AI Image Generator", "tags": ["image"] },
+  { "name": "Leonardo", "url": "https://leonardo.ai/", "description": "Powerful AI image generation and community assets.", "category": "AI Image Generator", "tags": ["image"] },
+  { "name": "Midjourney", "url": "https://www.midjourney.com/", "description": "Popular fantasy and art-focused image generator.", "category": "AI Image Generator", "tags": ["image"] },
+  { "name": "Pictory", "url": "https://pictory.ai/", "description": "Create videos automatically from long form text or articles.", "category": "AI Video Generator", "tags": ["video-gen","text2video"] },
+
+  { "name": "ClickUp AI", "url": "https://clickup.com/ai", "description": "Productivity + AI features in ClickUp for templates & writing.", "category": "AI Productivity", "tags": ["productivity","writing"] },
+  { "name": "Notion AI", "url": "https://www.notion.so/product/ai", "description": "AI in Notion for notes, summaries and writing.", "category": "AI Productivity", "tags": ["productivity","writing"] },
+
+  { "name": "Surfer SEO", "url": "https://surferseo.com/", "description": "SEO content optimization with AI-backed recommendations.", "category": "SEO", "tags": ["seo","content"] },
+  { "name": "Frase", "url": "https://www.frase.io/", "description": "AI research & content brief builder for SEO-focused writing.", "category": "SEO", "tags": ["seo","writing"] },
+
+  { "name": "Wordtune", "url": "https://www.wordtune.com/", "description": "Rewrite and enhance sentences using AI.", "category": "Writing", "tags": ["writing","editor"] },
+  { "name": "Scalenut", "url": "https://www.scalenut.com/", "description": "Content research and AI writing platform.", "category": "Writing", "tags": ["writing","seo"] },
+  { "name": "Rytr", "url": "https://rytr.me/", "description": "AI writing assistant for fast content generation.", "category": "Writing", "tags": ["writing"] },
+  { "name": "Writesonic", "url": "https://writesonic.com/", "description": "AI copywriting for ads, blogs and more.", "category": "Writing", "tags": ["writing"] },
+  { "name": "Copy.ai", "url": "https://www.copy.ai/", "description": "AI copywriting platform for marketing content.", "category": "Writing", "tags": ["writing"] },
+  { "name": "Jasper", "url": "https://www.jasper.ai/", "description": "AI content platform for marketing and long-form writing.", "category": "Writing", "tags": ["writing"] },
+
+  { "name": "Grammarly", "url": "https://grammarly.com/", "description": "AI writing assistant for grammar, tone and clarity.", "category": "Writing", "tags": ["writing","editor"] },
+  { "name": "QuillBot", "url": "https://quillbot.com/", "description": "Rewrite and paraphrase text quickly with AI.", "category": "Writing", "tags": ["writing"] },
+  { "name": "DeepL", "url": "https://www.deepl.com/", "description": "State-of-the-art translation with AI quality.", "category": "Writing/Translation", "tags": ["translation"] },
+
+  { "name": "Play.ht", "url": "https://play.ht/", "description": "Text-to-speech platform with lifelike voices.", "category": "AI Voice", "tags": ["text2voice","tts","voice","text2voice"] },
+  { "name": "Speechify", "url": "https://speechify.com/", "description": "Text-to-speech for reading long-form content.", "category": "AI Voice", "tags": ["text2voice","tts"] },
+  { "name": "LOVO", "url": "https://lovo.ai/", "description": "Create natural-sounding AI voiceovers.", "category": "AI Voice", "tags": ["text2voice","tts"] },
+  { "name": "Murf", "url": "https://murf.ai/", "description": "AI voice generator for presentations and videos.", "category": "AI Voice", "tags": ["text2voice","tts"] },
+  { "name": "ElevenLabs", "url": "https://elevenlabs.io/", "description": "High-quality realistic voice generation and cloning.", "category": "AI Voice", "tags": ["text2voice","tts"] },
+  { "name": "Descript", "url": "https://www.descript.com/", "description": "Audio & video editing with Overdub voice cloning.", "category": "AI Voice/Video", "tags": ["audio","voice","video"] },
+
+  { "name": "Cleanup.pictures", "url": "https://cleanup.pictures/", "description": "Remove unwanted objects from photos with AI.", "category": "AI Image Editing", "tags": ["image","edit"] },
+  { "name": "Remove.bg", "url": "https://www.remove.bg/", "description": "Automatic background removal from images.", "category": "AI Image Editing", "tags": ["image","edit"] },
+  { "name": "Fotor", "url": "https://www.fotor.com/", "description": "Photo editing & AI-enhanced design tools.", "category": "AI Image Editing", "tags": ["image","edit"] },
+  { "name": "Canva AI", "url": "https://www.canva.com/features/ai/", "description": "Design platform with AI features & templates.", "category": "AI Design", "tags": ["design","image"] },
+  { "name": "Simplified", "url": "https://simplified.com/", "description": "All-in-one design & content creation with AI.", "category": "AI Design", "tags": ["design","content"] },
+
+  { "name": "SlidesAI", "url": "https://slidesai.io/", "description": "Create presentation slides using AI.", "category": "AI Productivity", "tags": ["presentation","productivity"] },
+  { "name": "Slidesgo AI", "url": "https://slidesgo.com/ai", "description": "AI presentation templates and slide content.", "category": "AI Productivity", "tags": ["presentation"] },
+  { "name": "Gamma.app", "url": "https://gamma.app/", "description": "AI-powered presentation & storytelling tool.", "category": "AI Productivity", "tags": ["presentation"] },
+  { "name": "Beautiful.ai", "url": "https://www.beautiful.ai/", "description": "Design smart, branded presentations quickly.", "category": "AI Productivity", "tags": ["presentation"] },
+  { "name": "Tome", "url": "https://tome.app/", "description": "AI storytelling & presentation generation.", "category": "AI Productivity", "tags": ["presentation"] },
+
+  { "name": "Vidyo.ai", "url": "https://vidyo.ai/", "description": "Auto-create highlight videos from long content.", "category": "AI Video Tools", "tags": ["video-gen","auto-edit"] },
+  { "name": "VanceAI", "url": "https://vanceai.com/", "description": "Image enhancement and upscaling with AI.", "category": "AI Image Tools", "tags": ["image","upscale"] },
+
+  { "name": "Artbreeder", "url": "https://www.artbreeder.com/", "description": "Collaborative image mixing and generation.", "category": "AI Image Generator", "tags": ["image","creative"] },
+  { "name": "NightCafe Creator", "url": "https://creator.nightcafe.studio/", "description": "AI art generation community with multiple models.", "category": "AI Image Generator", "tags": ["image"] },
+  { "name": "Craiyon", "url": "https://www.craiyon.com/", "description": "Open-ended image generation from text prompts.", "category": "AI Image Generator", "tags": ["image"] },
+  { "name": "Illustroke", "url": "https://illustroke.com/", "description": "AI vector illustration generator.", "category": "AI Design", "tags": ["design","vector"] },
+
+  { "name": "Zyro Logo Maker", "url": "https://zyro.com/tools/logo-maker", "description": "AI logo generator and branding tools.", "category": "AI Design", "tags": ["logo","brand"] },
+  { "name": "Namelix", "url": "https://namelix.com/", "description": "AI business name generator.", "category": "AI Branding", "tags": ["brand","names"] },
+  { "name": "LogoAI", "url": "https://logoai.com/", "description": "AI-powered logo creation.", "category": "AI Design", "tags": ["logo"] },
+  { "name": "Brandmark", "url": "https://brandmark.io/", "description": "AI logo & brand identity generation.", "category": "AI Design", "tags": ["logo","brand"] },
+  { "name": "Looka", "url": "https://looka.com/", "description": "Logo maker with AI suggestions and brand kits.", "category": "AI Design", "tags": ["logo","brand"] },
+  { "name": "Hotpot AI", "url": "https://hotpot.ai/", "description": "AI image enhancement and content tools.", "category": "AI Image Tools", "tags": ["image","tools"] },
+  { "name": "Designs.ai", "url": "https://designs.ai/", "description": "Branding, logos, videos and more using AI.", "category": "AI Design", "tags": ["design","video"] },
+
+  { "name": "Steve AI", "url": "https://www.steve.ai/", "description": "Convert scripts to animated videos with AI.", "category": "AI Video Tools", "tags": ["video-gen"] },
+  { "name": "Lumen5", "url": "https://lumen5.com/", "description": "Turn blog posts into social videos with AI.", "category": "AI Video Tools", "tags": ["text2video","video-gen"] },
+  { "name": "Animoto", "url": "https://animoto.com/", "description": "Online video maker with templates and AI assistance.", "category": "AI Video Tools", "tags": ["video"] },
+  { "name": "InVideo", "url": "https://invideo.io/", "description": "Video creation platform with AI templates.", "category": "AI Video Tools", "tags": ["video"] },
+
+  { "name": "Veed", "url": "https://www.veed.io/", "description": "Online video editor with auto-generating subtitles and AI tools.", "category": "AI Video Tools", "tags": ["video","editor"] },
+  { "name": "Kapwing", "url": "https://www.kapwing.com/", "description": "Browser-based video editor with AI features.", "category": "AI Video Tools", "tags": ["video","editor"] },
+  { "name": "Wisecut", "url": "https://www.wisecut.video/", "description": "Auto-edit videos using AI; removes pauses and adds music.", "category": "AI Video Tools", "tags": ["video","editing"] },
+  { "name": "Upscale.media", "url": "https://upscale.media/", "description": "Quick AI image upscaling and enhancement.", "category": "AI Image Tools", "tags": ["image","upscale"] }
 ]
