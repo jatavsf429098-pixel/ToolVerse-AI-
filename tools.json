@@ -1,50 +1,86 @@
 [
   {
-    "name": "Instagram Video Downloader",
-    "url": "https://vd6s.com/en/",
-    "description": "Download Instagram videos easily by pasting the URL. Fast and free tool.",
-    "category": "Video Downloader"
-  },
-  {
-    "name": "Pinterest Video Downloader",
+    "name": "PinDown",
     "url": "https://pindown.io/",
-    "description": "Download Pinterest videos and images quickly with this simple online tool.",
-    "category": "Video Downloader"
+    "description": "Fast Pinterest video & image downloader — paste a pin URL to get media files.",
+    "category": "Video Downloader",
+    "tags": ["pinterest","video","download"]
   },
   {
-    "name": "FastDL - All Video Downloader",
+    "name": "FastDL",
     "url": "https://fastdl.app/en",
-    "description": "Download videos from Instagram, TikTok, Facebook and more using FastDL.",
-    "category": "Video Downloader"
+    "description": "Universal downloader for multiple social platforms (Instagram, TikTok, etc.).",
+    "category": "Video Downloader",
+    "tags": ["download","instagram","tiktok","video"]
   },
   {
-    "name": "ElevenLabs - AI Voice Generator",
+    "name": "VD6S",
+    "url": "https://vd6s.com/en/",
+    "description": "Download Instagram reels and videos quickly.",
+    "category": "Video Downloader",
+    "tags": ["instagram","download","reels"]
+  },
+  {
+    "name": "ElevenLabs",
     "url": "https://www.elevenlabs.io/",
-    "description": "Create realistic voiceovers using AI voices for storytelling, videos, and narration.",
-    "category": "AI Voice Generator"
+    "description": "Realistic AI voice generation and voice cloning.",
+    "category": "AI Voice Generator",
+    "tags": ["voice","tts","ai","speech"]
   },
   {
-    "name": "PlayHT - Text to Speech",
+    "name": "Play.ht",
     "url": "https://play.ht/",
-    "description": "Generate lifelike text-to-speech voiceovers using advanced AI technology.",
-    "category": "AI Voice Generator"
+    "description": "Text-to-speech platform for natural voiceovers.",
+    "category": "AI Voice Generator",
+    "tags": ["tts","voice","audio"]
   },
   {
-    "name": "Pika Labs - AI Video Generator",
+    "name": "Pika Labs",
     "url": "https://www.pika.art/",
-    "description": "Create videos from text prompts using Pika’s AI-powered video generation platform.",
-    "category": "AI Video Generator"
+    "description": "Turn prompts into short AI-generated videos and experiments.",
+    "category": "AI Video Generator",
+    "tags": ["video-gen","ai","animation"]
   },
   {
-    "name": "Leonardo AI - Image Generator",
+    "name": "Leonardo AI",
     "url": "https://leonardo.ai/",
-    "description": "Generate detailed AI artwork and designs using prompts with Leonardo AI.",
-    "category": "AI Image Generator"
+    "description": "Highly customizable AI image generator for artists and game devs.",
+    "category": "AI Image Generator",
+    "tags": ["image","generation","ai"]
   },
   {
-    "name": "Synthesia - AI Video Avatar",
+    "name": "Synthesia",
     "url": "https://www.synthesia.io/",
-    "description": "Create professional videos from text using AI avatars and voices.",
-    "category": "AI Video Generator"
+    "description": "Create AI avatar videos from text (great for tutorials & marketing).",
+    "category": "AI Video Generator",
+    "tags": ["video-gen","avatar","ai"]
+  },
+  {
+    "name": "Runway ML",
+    "url": "https://runwayml.com/",
+    "description": "End-to-end creative tools for video & image generation.",
+    "category": "AI Video Generator",
+    "tags": ["video","ai","creative"]
+  },
+  {
+    "name": "ChatGPT",
+    "url": "https://chat.openai.com/",
+    "description": "Conversational AI by OpenAI—chat, code, brainstorm, and more.",
+    "category": "Chatbot",
+    "tags": ["chat","assistant","openai"]
+  },
+  {
+    "name": "Canva",
+    "url": "https://www.canva.com/",
+    "description": "Design tool with templates and AI features for social content.",
+    "category": "Design",
+    "tags": ["design","graphics","social"]
+  },
+  {
+    "name": "Copy.ai",
+    "url": "https://www.copy.ai/",
+    "description": "AI copywriting assistant for ads, blogs, and social posts.",
+    "category": "Writing",
+    "tags": ["writing","marketing","copy"]
   }
 ]
