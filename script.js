@@ -1,207 +1,211 @@
-/* script.js — loads tools.json, renders UI, search, category & language toggle.
-   Place script.js in same folder as index.html and tools.json.
+/* script.js
+   Loads tools.json, renders UI, supports search, category filter, language toggle,
+   top-5 lists (by tags), and prominent links.
+   Drop this file into same folder as index.html and tools.json.
 */
 
-/* --------- Configuration & state --------- */
-const TOOLS_JSON = 'tools.json'; // relative path to JSON
-const state = {
-  tools: [],
-  lang: 'en',
-  categories: new Set()
-};
+/* -------- Configuration & i18n -------- */
+const TOOLS_JSON = 'tools.json'; // path to data file
 
-/* Translation strings for small UI text (English + Hindi) */
 const I18N = {
-  'en': {
-    tagline: 'Discover the best AI tools for video, image, audio, and more.',
-    popular: 'Prominent AI Sites',
+  en: {
+    tagline: 'Discover the best AI tools — video, image, voice, writing and more.',
+    all: 'All Categories',
+    prominent: 'Special / Prominent Links',
     featured: 'Featured Top Lists',
-    top5_video_gen: 'Top 5 Video Generation Websites',
+    top5_video_gen: 'Top 5 Video Generator Websites',
     top5_img2vid: 'Top 5 Image → Video Websites',
     top5_text2voice: 'Top 5 Text → Voice Websites',
-    all_resources: 'All Resources',
-    note: 'Tip: Use search and categories to find tools fast.',
-    all: 'All Categories',
+    all_resources: 'All AI Tools',
+    note: 'Tip: Edit tools.json to add or update tools.',
     visit: 'Visit',
     demo: 'Demo'
   },
-  'hi': {
-    tagline: 'वीडियो, इमेज और ऑडियो के लिए बेस्ट AI टूल खोजें।',
-    popular: 'प्रमुख AI साइटें',
-    featured: 'शॉर्टलिस्टेड टॉप लिस्ट',
+  hi: {
+    tagline: 'वीडियो, इमेज, वॉइस और राइटिंग के लिए श्रेष्ठ AI टूल खोजें।',
+    all: 'सभी श्रेणियाँ',
+    prominent: 'प्रमुख लिंक',
+    featured: 'फ़ीचर की गई टॉप लिस्ट्स',
     top5_video_gen: 'शीर्ष 5 वीडियो जनरेशन वेबसाइट्स',
     top5_img2vid: 'शीर्ष 5 इमेज → वीडियो वेबसाइट्स',
     top5_text2voice: 'शीर्ष 5 टेक्स्ट → वॉइस वेबसाइट्स',
-    all_resources: 'सभी संसाधन',
-    note: 'सुझाव: टूल खोजने के लिए सर्च और कैटेगरी का उपयोग करें।',
-    all: 'सभी कैटेगरी',
+    all_resources: 'सभी AI टूल',
+    note: 'सुझाव: tools.json को संपादित कर टूल जोड़ें या बदलें।',
     visit: 'खोलें',
     demo: 'डेमो'
   }
 };
 
-/* --------- Utility DOM selectors --------- */
-const dom = {
-  prominentGrid: () => document.getElementById('prominentGrid'),
-  listVideoGen: () => document.getElementById('list-video-gen'),
-  listImg2Vid: () => document.getElementById('list-img2vid'),
-  listText2Voice: () => document.getElementById('list-text2voice'),
-  toolsGrid: () => document.getElementById('toolsGrid'),
-  categorySelect: () => document.getElementById('categorySelect'),
-  searchInput: () => document.getElementById('searchInput'),
-  langSelect: () => document.getElementById('langSelect')
+let state = {
+  tools: [],
+  lang: 'en',
+  categories: []
 };
 
-/* --------- Fetch JSON and initialize UI --------- */
-async function loadTools() {
+/* -------- Helper DOM getters -------- */
+const $ = sel => document.querySelector(sel);
+const $$ = sel => Array.from(document.querySelectorAll(sel));
+
+/* -------- Fetch and initialize -------- */
+async function loadToolsJson() {
   try {
-    const res = await fetch(TOOLS_JSON, {cache: "no-store"});
-    if (!res.ok) throw new Error('Failed to fetch tools.json: ' + res.status);
+    const res = await fetch(TOOLS_JSON, {cache: 'no-store'});
+    if (!res.ok) throw new Error(`Failed to fetch ${TOOLS_JSON}: ${res.status}`);
     const data = await res.json();
     state.tools = Array.isArray(data) ? data : [];
-    buildCategoryList();
-    renderAll();
+    buildCategories();
+    applyI18n();
+    renderProminent();
+    renderTopLists();
+    renderToolsGrid();
   } catch (err) {
     console.error(err);
-    document.getElementById('toolsContainer').innerHTML = `<p style="color:#b91c1c">Failed to load tools.json — check the console.</p>`;
+    const grid = $('#toolsGrid');
+    if (grid) grid.innerHTML = `<div class="card"><p style="color:#b91c1c">Unable to load tools.json — check console for details.</p></div>`;
   }
 }
 
-/* --------- Build categories from JSON --------- */
-function buildCategoryList() {
-  state.categories.clear();
-  state.tools.forEach(t => {
-    if (t.category) state.categories.add(t.category);
-  });
-
-  const select = dom.categorySelect();
-  // Clear existing options except 'all'
-  select.innerHTML = `<option value="all" data-i18n="all">${I18N[state.lang].all}</option>`;
-  state.categories.forEach(cat => {
-    const opt = document.createElement('option');
-    opt.value = cat;
-    opt.textContent = cat;
-    select.appendChild(opt);
-  });
-}
-
-/* --------- Render helpers --------- */
-function clearChildren(el){ while(el.firstChild) el.removeChild(el.firstChild); }
-
-/* Prominent (the three main links you wanted to show) */
-function renderProminent() {
-  const grid = dom.prominentGrid();
-  clearChildren(grid);
-  // Prefer to show these exact ones first (if present)
-  const preferred = ['https://pindown.io/','https://fastdl.app/en','https://vd6s.com/en/'];
-  preferred.forEach(url => {
-    const tool = state.tools.find(t => t.url === url);
-    if (tool) {
-      grid.appendChild(makeProminentCard(tool));
-    } else {
-      // If not in JSON, still show link card
-      const fallback = { name: url.replace(/^https?:\/\//,''), url, description: '' };
-      grid.appendChild(makeProminentCard(fallback));
+/* -------- Internationalization (small UI items) -------- */
+function applyI18n() {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (I18N[state.lang] && I18N[state.lang][key]) {
+      el.textContent = I18N[state.lang][key];
     }
   });
 }
 
-/* Card creation */
-function makeProminentCard(tool) {
-  const card = document.createElement('article');
-  card.className = 'prominent-card';
-  const title = document.createElement('h3');
-  title.textContent = tool.name || 'External';
-  const p = document.createElement('p');
-  p.textContent = tool.description || '';
-  const actions = document.createElement('div');
-  actions.className = 'actions';
-  const visit = document.createElement('a');
-  visit.className = 'btn';
-  visit.target = '_blank';
-  visit.rel = 'noopener';
-  visit.href = tool.url;
-  visit.textContent = I18N[state.lang].visit;
-  actions.appendChild(visit);
-
-  card.appendChild(title);
-  card.appendChild(p);
-  card.appendChild(actions);
-  return card;
+/* -------- Build category dropdown from JSON -------- */
+function buildCategories() {
+  const categories = new Set();
+  state.tools.forEach(t => { if (t.category) categories.add(t.category); });
+  state.categories = Array.from(categories).sort();
+  const sel = $('#categorySelect');
+  if (!sel) return;
+  sel.innerHTML = '';
+  const optAll = document.createElement('option');
+  optAll.value = 'all';
+  optAll.textContent = I18N[state.lang].all;
+  sel.appendChild(optAll);
+  state.categories.forEach(cat => {
+    const o = document.createElement('option');
+    o.value = cat;
+    o.textContent = cat;
+    sel.appendChild(o);
+  });
 }
 
-/* Render lists (top 5) by category filter tags in JSON */
+/* -------- Render prominent special links (the 3 required) -------- */
+function renderProminent() {
+  const required = [
+    'https://pindown.io/',
+    'https://fastdl.app/en',
+    'https://vd6s.com/en'
+  ];
+  const grid = $('#prominentGrid');
+  if (!grid) return;
+  grid.innerHTML = '';
+  required.forEach(url => {
+    const tool = state.tools.find(t => t.url && t.url.replace(/\/+$/, '') === url.replace(/\/+$/, ''));
+    const card = document.createElement('article');
+    card.className = 'prominent-card card';
+    const title = document.createElement('h3');
+    title.textContent = (tool && tool.name) ? tool.name : url.replace(/^https?:\/\/(www\.)?/, '');
+    const desc = document.createElement('p');
+    desc.textContent = (tool && tool.description) ? tool.description : '';
+    const a = document.createElement('a');
+    a.href = url;
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.className = 'btn';
+    a.textContent = I18N[state.lang].visit;
+    card.appendChild(title); card.appendChild(desc); card.appendChild(a);
+    grid.appendChild(card);
+  });
+}
+
+/* -------- Render top lists: derive by tags or category keywords -------- */
 function renderTopLists() {
-  // Use tags or category values in JSON — this implementation filters by tool.topList tags
-  const videoGen = state.tools.filter(t => (t.tags||[]).includes('video-gen') || (t.category||'').toLowerCase().includes('video')).slice(0,5);
-  const img2vid = state.tools.filter(t => (t.tags||[]).includes('img2vid') || (t.category||'').toLowerCase().includes('image')).slice(0,5);
-  const text2voice = state.tools.filter(t => (t.tags||[]).includes('text2voice') || (t.category||'').toLowerCase().includes('voice')).slice(0,5);
+  const pick = (tagOrCat) => {
+    const lower = tagOrCat.toLowerCase();
+    // prefer explicit tags, then category match, then substring match
+    return state.tools.filter(t =>
+      (t.tags && t.tags.map(x=>x.toLowerCase()).includes(lower)) ||
+      (t.category && t.category.toLowerCase().includes(lower)) ||
+      (t.description && t.description.toLowerCase().includes(lower))
+    ).slice(0,5);
+  };
 
-  populateList(dom.listVideoGen(), videoGen);
-  populateList(dom.listImg2Vid(), img2vid);
-  populateList(dom.listText2Voice(), text2voice);
+  const videoGen = pick('video-gen');
+  const img2vid  = pick('img2vid');
+  const text2voice = pick('text2voice');
+
+  populateList('#topVideoGen', videoGen);
+  populateList('#topImg2Vid', img2vid);
+  populateList('#topText2Voice', text2voice);
 }
 
-function populateList(containerEl, list) {
-  clearChildren(containerEl);
-  if (!list.length) {
-    containerEl.innerHTML = `<li style="color:${'#6b7280'}">${I18N[state.lang].note}</li>`;
+function populateList(sel, items) {
+  const ul = document.querySelector(sel);
+  if (!ul) return;
+  ul.innerHTML = '';
+  if (!items.length) {
+    ul.innerHTML = `<li class="empty">${I18N[state.lang].note}</li>`;
     return;
   }
-  list.forEach(item => {
+  items.forEach(it => {
     const li = document.createElement('li');
+    li.className = 'resource-item';
     const left = document.createElement('div');
-    left.className = 'left';
+    left.className = 'ri-left';
     const name = document.createElement('strong');
-    name.textContent = item.name;
+    name.textContent = it.name;
     const meta = document.createElement('div');
     meta.className = 'meta';
-    meta.textContent = item.description || '';
+    meta.textContent = it.description || '';
     left.appendChild(name);
     left.appendChild(meta);
 
     const right = document.createElement('div');
     const a = document.createElement('a');
-    a.href = item.url;
+    a.className = 'btn';
+    a.href = it.url;
     a.target = '_blank';
     a.rel = 'noopener';
-    a.className = 'btn';
     a.textContent = I18N[state.lang].visit;
     right.appendChild(a);
 
     li.appendChild(left);
     li.appendChild(right);
-    containerEl.appendChild(li);
+    ul.appendChild(li);
   });
 }
 
-/* Render all resources grid */
+/* -------- Render the tools grid (cards) -------- */
 function renderToolsGrid(filtered = null) {
-  const grid = document.getElementById('toolsGrid');
-  clearChildren(grid);
+  const grid = $('#toolsGrid');
+  if (!grid) return;
+  grid.innerHTML = '';
   const list = filtered || state.tools;
   if (!list.length) {
-    grid.innerHTML = `<p style="color:#6b7280">${I18N[state.lang].note}</p>`;
+    grid.innerHTML = `<div class="card"><p style="color:#6b7280">${I18N[state.lang].note}</p></div>`;
     return;
   }
 
   list.forEach(tool => {
     const card = document.createElement('article');
-    card.className = 'tool-card';
+    card.className = 'tool-card card';
+    if (tool.background) card.style.background = tool.background;
     card.dataset.category = tool.category || 'Uncategorized';
 
-    const titleWrap = document.createElement('div');
-    titleWrap.className = 'title';
     const title = document.createElement('h3');
     title.textContent = tool.name;
-    titleWrap.appendChild(title);
 
     const desc = document.createElement('p');
     desc.textContent = tool.description || '';
 
     const actions = document.createElement('div');
-    actions.className = 'actions';
-
+    actions.className = 'card-actions';
     const visit = document.createElement('a');
     visit.className = 'btn';
     visit.href = tool.url;
@@ -209,7 +213,8 @@ function renderToolsGrid(filtered = null) {
     visit.rel = 'noopener';
     visit.textContent = I18N[state.lang].visit;
 
-    // If the JSON item provides a demo or embed link, show a secondary button
+    actions.appendChild(visit);
+
     if (tool.demo) {
       const demo = document.createElement('a');
       demo.className = 'btn secondary';
@@ -220,71 +225,59 @@ function renderToolsGrid(filtered = null) {
       actions.appendChild(demo);
     }
 
-    actions.appendChild(visit);
-
-    card.appendChild(titleWrap);
+    card.appendChild(title);
     card.appendChild(desc);
     card.appendChild(actions);
-
     grid.appendChild(card);
   });
 }
 
-/* --------- Search + filter logic --------- */
+/* -------- Search + category filters -------- */
 function applyFilters() {
-  const query = dom.searchInput().value.trim().toLowerCase();
-  const cat = dom.categorySelect().value;
+  const q = ($('#searchInput').value || '').trim().toLowerCase();
+  const cat = ($('#categorySelect').value || 'all');
 
   const filtered = state.tools.filter(t => {
     const text = ((t.name||'') + ' ' + (t.description||'') + ' ' + (t.category||'') + ' ' + (t.tags||[]).join(' ')).toLowerCase();
-    const matchesQuery = query === '' || text.includes(query);
-    const matchesCat = cat === 'all' || (t.category || '') === cat;
-    return matchesQuery && matchesCat;
+    const matchQ = q === '' || text.includes(q);
+    const matchC = (cat === 'all') || (t.category === cat);
+    return matchQ && matchC;
   });
 
   renderToolsGrid(filtered);
 }
 
-/* --------- Language switcher (English/Hindi) --------- */
-function applyLanguage() {
-  const lang = state.lang;
-  // small UI strings
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (I18N[lang] && I18N[lang][key]) el.textContent = I18N[lang][key];
-  });
-  // rebuild category select labels
-  buildCategoryList();
-  renderAll(); // re-render content so button labels are localized
-}
-
-/* --------- Render everything --------- */
-function renderAll() {
-  renderProminent();
-  renderTopLists();
-  renderToolsGrid();
-}
-
-/* --------- Event wiring --------- */
+/* -------- Wire UI events -------- */
 function wireEvents() {
-  dom.searchInput().addEventListener('input', () => applyFilters());
-  dom.categorySelect().addEventListener('change', () => applyFilters());
-  dom.langSelect().addEventListener('change', (e) => {
+  const si = $('#searchInput');
+  const cs = $('#categorySelect');
+  const ls = $('#langSelect');
+
+  si.addEventListener('input', () => applyFilters());
+  cs.addEventListener('change', () => applyFilters());
+  ls.addEventListener('change', (e) => {
     state.lang = e.target.value;
-    applyLanguage();
+    applyI18n();
+    buildCategories();
+    renderProminent();
+    renderTopLists();
+    renderToolsGrid();
   });
 }
 
-/* --------- Initialize app --------- */
+/* -------- Initialize app -------- */
 function init() {
-  // Ensure DOM placeholders exist
-  if (!dom.prominentGrid() || !dom.toolsGrid()) {
-    // Create missing containers for older templates
-    if (!dom.prominentGrid()) document.getElementById('prominentGrid')?.remove();
+  // Ensure DOM elements exist
+  if (!$('#toolsGrid')) {
+    // If HTML structure differs, create a container
+    const main = document.querySelector('.main-content') || document.body;
+    const grid = document.createElement('div');
+    grid.id = 'toolsGrid';
+    main.appendChild(grid);
   }
   wireEvents();
-  loadTools();
+  loadToolsJson();
 }
 
-/* Run init after DOM ready */
+/* Run */
 document.addEventListener('DOMContentLoaded', init);
