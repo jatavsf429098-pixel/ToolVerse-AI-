@@ -1,283 +1,151 @@
-/* script.js
-   Loads tools.json, renders UI, supports search, category filter, language toggle,
-   top-5 lists (by tags), and prominent links.
-   Drop this file into same folder as index.html and tools.json.
-*/
+// Placeholder for API keys and URLs. Replace these with your actual credentials.
+const API_CONFIG = {
+    GEMINI_API_KEY: 'YOUR_GEMINI_API_KEY',
+    GEMINI_URL: 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent',
+    
+    VEO_API_KEY: 'YOUR_VEO_API_KEY',
+    VEO_CREATE_URL: 'https://api.veo.com/v3/videos/create',
+    VEO_STATUS_URL: 'https://api.veo.com/v3/videos/status',
 
-/* -------- Configuration & i18n -------- */
-const TOOLS_JSON = 'tools.json'; // path to data file
-
-const I18N = {
-  en: {
-    tagline: 'Discover the best AI tools — video, image, voice, writing and more.',
-    all: 'All Categories',
-    prominent: 'Special / Prominent Links',
-    featured: 'Featured Top Lists',
-    top5_video_gen: 'Top 5 Video Generator Websites',
-    top5_img2vid: 'Top 5 Image → Video Websites',
-    top5_text2voice: 'Top 5 Text → Voice Websites',
-    all_resources: 'All AI Tools',
-    note: 'Tip: Edit tools.json to add or update tools.',
-    visit: 'Visit',
-    demo: 'Demo'
-  },
-  hi: {
-    tagline: 'वीडियो, इमेज, वॉइस और राइटिंग के लिए श्रेष्ठ AI टूल खोजें।',
-    all: 'सभी श्रेणियाँ',
-    prominent: 'प्रमुख लिंक',
-    featured: 'फ़ीचर की गई टॉप लिस्ट्स',
-    top5_video_gen: 'शीर्ष 5 वीडियो जनरेशन वेबसाइट्स',
-    top5_img2vid: 'शीर्ष 5 इमेज → वीडियो वेबसाइट्स',
-    top5_text2voice: 'शीर्ष 5 टेक्स्ट → वॉइस वेबसाइट्स',
-    all_resources: 'सभी AI टूल',
-    note: 'सुझाव: tools.json को संपादित कर टूल जोड़ें या बदलें।',
-    visit: 'खोलें',
-    demo: 'डेमो'
-  }
+    YOUTUBE_API_KEY: 'YOUR_YOUTUBE_API_KEY',
+    YOUTUBE_UPLOAD_URL: 'https://www.googleapis.com/upload/youtube/v3/videos?part=snippet,status',
+    // Note: YouTube OAuth requires a more complex client-side flow.
 };
 
-let state = {
-  tools: [],
-  lang: 'en',
-  categories: []
-};
+// 1. DOM Element Selection
+const generateBtn = document.getElementById('generate-btn');
+const scriptInput = document.getElementById('script-input');
+const characterSelect = document.getElementById('character-select');
+const statusLog = document.getElementById('status-log');
 
-/* -------- Helper DOM getters -------- */
-const $ = sel => document.querySelector(sel);
-const $$ = sel => Array.from(document.querySelectorAll(sel));
+// 2. Main Event Listener
+generateBtn.addEventListener('click', handleGeneration);
 
-/* -------- Fetch and initialize -------- */
-async function loadToolsJson() {
-  try {
-    const res = await fetch(TOOLS_JSON, {cache: 'no-store'});
-    if (!res.ok) throw new Error(`Failed to fetch ${TOOLS_JSON}: ${res.status}`);
-    const data = await res.json();
-    state.tools = Array.isArray(data) ? data : [];
-    buildCategories();
-    applyI18n();
-    renderProminent();
-    renderTopLists();
-    renderToolsGrid();
-  } catch (err) {
-    console.error(err);
-    const grid = $('#toolsGrid');
-    if (grid) grid.innerHTML = `<div class="card"><p style="color:#b91c1c">Unable to load tools.json — check console for details.</p></div>`;
-  }
-}
+/**
+ * Main handler function to orchestrate the video generation and upload process.
+ */
+async function handleGeneration() {
+    const topic = scriptInput.value.trim();
+    const character = characterSelect.value;
 
-/* -------- Internationalization (small UI items) -------- */
-function applyI18n() {
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (I18N[state.lang] && I18N[state.lang][key]) {
-      el.textContent = I18N[state.lang][key];
-    }
-  });
-}
-
-/* -------- Build category dropdown from JSON -------- */
-function buildCategories() {
-  const categories = new Set();
-  state.tools.forEach(t => { if (t.category) categories.add(t.category); });
-  state.categories = Array.from(categories).sort();
-  const sel = $('#categorySelect');
-  if (!sel) return;
-  sel.innerHTML = '';
-  const optAll = document.createElement('option');
-  optAll.value = 'all';
-  optAll.textContent = I18N[state.lang].all;
-  sel.appendChild(optAll);
-  state.categories.forEach(cat => {
-    const o = document.createElement('option');
-    o.value = cat;
-    o.textContent = cat;
-    sel.appendChild(o);
-  });
-}
-
-/* -------- Render prominent special links (the 3 required) -------- */
-function renderProminent() {
-  const required = [
-    'https://pindown.io/',
-    'https://fastdl.app/en',
-    'https://vd6s.com/en'
-  ];
-  const grid = $('#prominentGrid');
-  if (!grid) return;
-  grid.innerHTML = '';
-  required.forEach(url => {
-    const tool = state.tools.find(t => t.url && t.url.replace(/\/+$/, '') === url.replace(/\/+$/, ''));
-    const card = document.createElement('article');
-    card.className = 'prominent-card card';
-    const title = document.createElement('h3');
-    title.textContent = (tool && tool.name) ? tool.name : url.replace(/^https?:\/\/(www\.)?/, '');
-    const desc = document.createElement('p');
-    desc.textContent = (tool && tool.description) ? tool.description : '';
-    const a = document.createElement('a');
-    a.href = url;
-    a.target = '_blank';
-    a.rel = 'noopener';
-    a.className = 'btn';
-    a.textContent = I18N[state.lang].visit;
-    card.appendChild(title); card.appendChild(desc); card.appendChild(a);
-    grid.appendChild(card);
-  });
-}
-
-/* -------- Render top lists: derive by tags or category keywords -------- */
-function renderTopLists() {
-  const pick = (tagOrCat) => {
-    const lower = tagOrCat.toLowerCase();
-    // prefer explicit tags, then category match, then substring match
-    return state.tools.filter(t =>
-      (t.tags && t.tags.map(x=>x.toLowerCase()).includes(lower)) ||
-      (t.category && t.category.toLowerCase().includes(lower)) ||
-      (t.description && t.description.toLowerCase().includes(lower))
-    ).slice(0,5);
-  };
-
-  const videoGen = pick('video-gen');
-  const img2vid  = pick('img2vid');
-  const text2voice = pick('text2voice');
-
-  populateList('#topVideoGen', videoGen);
-  populateList('#topImg2Vid', img2vid);
-  populateList('#topText2Voice', text2voice);
-}
-
-function populateList(sel, items) {
-  const ul = document.querySelector(sel);
-  if (!ul) return;
-  ul.innerHTML = '';
-  if (!items.length) {
-    ul.innerHTML = `<li class="empty">${I18N[state.lang].note}</li>`;
-    return;
-  }
-  items.forEach(it => {
-    const li = document.createElement('li');
-    li.className = 'resource-item';
-    const left = document.createElement('div');
-    left.className = 'ri-left';
-    const name = document.createElement('strong');
-    name.textContent = it.name;
-    const meta = document.createElement('div');
-    meta.className = 'meta';
-    meta.textContent = it.description || '';
-    left.appendChild(name);
-    left.appendChild(meta);
-
-    const right = document.createElement('div');
-    const a = document.createElement('a');
-    a.className = 'btn';
-    a.href = it.url;
-    a.target = '_blank';
-    a.rel = 'noopener';
-    a.textContent = I18N[state.lang].visit;
-    right.appendChild(a);
-
-    li.appendChild(left);
-    li.appendChild(right);
-    ul.appendChild(li);
-  });
-}
-
-/* -------- Render the tools grid (cards) -------- */
-function renderToolsGrid(filtered = null) {
-  const grid = $('#toolsGrid');
-  if (!grid) return;
-  grid.innerHTML = '';
-  const list = filtered || state.tools;
-  if (!list.length) {
-    grid.innerHTML = `<div class="card"><p style="color:#6b7280">${I18N[state.lang].note}</p></div>`;
-    return;
-  }
-
-  list.forEach(tool => {
-    const card = document.createElement('article');
-    card.className = 'tool-card card';
-    if (tool.background) card.style.background = tool.background;
-    card.dataset.category = tool.category || 'Uncategorized';
-
-    const title = document.createElement('h3');
-    title.textContent = tool.name;
-
-    const desc = document.createElement('p');
-    desc.textContent = tool.description || '';
-
-    const actions = document.createElement('div');
-    actions.className = 'card-actions';
-    const visit = document.createElement('a');
-    visit.className = 'btn';
-    visit.href = tool.url;
-    visit.target = '_blank';
-    visit.rel = 'noopener';
-    visit.textContent = I18N[state.lang].visit;
-
-    actions.appendChild(visit);
-
-    if (tool.demo) {
-      const demo = document.createElement('a');
-      demo.className = 'btn secondary';
-      demo.href = tool.demo;
-      demo.target = '_blank';
-      demo.rel = 'noopener';
-      demo.textContent = I18N[state.lang].demo;
-      actions.appendChild(demo);
+    if (!topic) {
+        alert('Please enter a topic or script.');
+        return;
     }
 
-    card.appendChild(title);
-    card.appendChild(desc);
-    card.appendChild(actions);
-    grid.appendChild(card);
-  });
+    generateBtn.disabled = true;
+    statusLog.innerHTML = ''; // Clear previous logs
+
+    try {
+        showProgress('1. Starting process...');
+        const seoData = await generateScriptAndSEO(topic);
+        
+        showProgress('2. Script and SEO data generated successfully.');
+        console.log('SEO Data:', seoData);
+        
+        const videoUrl = await createVideo(seoData.script, character);
+        
+        showProgress('3. Video created. Awaiting simulated URL.');
+        console.log('Video URL:', videoUrl);
+        
+        await uploadToYouTube(videoUrl, seoData);
+
+        showProgress('✅ All steps completed! Video uploaded successfully.');
+
+    } catch (error) {
+        showProgress(`❌ An error occurred: ${error.message}`);
+        console.error('Process failed:', error);
+    } finally {
+        generateBtn.disabled = false; // Re-enable the button
+    }
 }
 
-/* -------- Search + category filters -------- */
-function applyFilters() {
-  const q = ($('#searchInput').value || '').trim().toLowerCase();
-  const cat = ($('#categorySelect').value || 'all');
-
-  const filtered = state.tools.filter(t => {
-    const text = ((t.name||'') + ' ' + (t.description||'') + ' ' + (t.category||'') + ' ' + (t.tags||[]).join(' ')).toLowerCase();
-    const matchQ = q === '' || text.includes(q);
-    const matchC = (cat === 'all') || (t.category === cat);
-    return matchQ && matchC;
-  });
-
-  renderToolsGrid(filtered);
+/**
+ * Appends a message to the progress log on the UI.
+ * @param {string} message The message to display.
+ */
+function showProgress(message) {
+    const logEntry = document.createElement('div');
+    logEntry.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+    statusLog.appendChild(logEntry);
+    statusLog.scrollTop = statusLog.scrollHeight; // Auto-scroll to the bottom
 }
 
-/* -------- Wire UI events -------- */
-function wireEvents() {
-  const si = $('#searchInput');
-  const cs = $('#categorySelect');
-  const ls = $('#langSelect');
+/**
+ * Simulates calling a language model API (like Gemini/ChatGPT) to get a script and SEO metadata.
+ * @param {string} topic The user-provided topic.
+ * @returns {Promise<object>} A promise that resolves with the script and SEO data.
+ */
+async function generateScriptAndSEO(topic) {
+    showProgress('  -> Calling Language Model API...');
+    // In a real application, you would use fetch() here:
+    // const response = await fetch(API_CONFIG.GEMINI_URL, { ... });
+    // const data = await response.json();
 
-  si.addEventListener('input', () => applyFilters());
-  cs.addEventListener('change', () => applyFilters());
-  ls.addEventListener('change', (e) => {
-    state.lang = e.target.value;
-    applyI18n();
-    buildCategories();
-    renderProminent();
-    renderTopLists();
-    renderToolsGrid();
-  });
+    // Simulate API call delay
+    await new Promise(resolve => setTimeout(resolve, 1500));
+
+    // Dummy response
+    return {
+        script: `A compelling story based on: "${topic}". The hero embarks on a great journey.`,
+        title: `AI Adventure: A Story About ${topic}`,
+        description: `Experience an epic tale generated by AI. This story explores the theme of "${topic}". #AIStory #GeneratedVideo`,
+        tags: ['AI', 'Storytelling', 'Animation', topic.split(' ')[0]]
+    };
 }
 
-/* -------- Initialize app -------- */
-function init() {
-  // Ensure DOM elements exist
-  if (!$('#toolsGrid')) {
-    // If HTML structure differs, create a container
-    const main = document.querySelector('.main-content') || document.body;
-    const grid = document.createElement('div');
-    grid.id = 'toolsGrid';
-    main.appendChild(grid);
-  }
-  wireEvents();
-  loadToolsJson();
+/**
+ * Simulates creating a video with an API like Veo 3.
+ * @param {string} script The script for the video.
+ * @param {string} character The selected character/voice.
+ * @returns {Promise<string>} A promise that resolves with a dummy video URL.
+ */
+async function createVideo(script, character) {
+    showProgress('  -> Sending script to Video Generation API...');
+    // In a real application, you would initiate the video creation here.
+    // const response = await fetch(API_CONFIG.VEO_CREATE_URL, { ... });
+    // const { videoId } = await response.json();
+    
+    // Simulate the time it takes for the video to be processed
+    await pollVideoStatus('dummy_video_id');
+    
+    // Dummy URL of the generated video file
+    return 'https://example.com/generated-videos/final_video_123.mp4';
 }
 
-/* Run */
-document.addEventListener('DOMContentLoaded', init);
+/**
+ * Simulates polling a status endpoint until the video is ready.
+ * @param {string} videoId The ID of the video being processed.
+ */
+async function pollVideoStatus(videoId) {
+    showProgress('  -> Video is processing. This may take a moment...');
+    // Simulate polling with delays
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    showProgress('  -> Status: 33% processed...');
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    showProgress('  -> Status: 66% processed...');
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    showProgress('  -> Status: 100% - Video ready!');
+}
+
+
+/**
+ * Simulates uploading the generated video to YouTube.
+ * @param {string} videoUrl The URL of the video file.
+ * @param {object} seoData The metadata for the video (title, description, tags).
+ */
+async function uploadToYouTube(videoUrl, seoData) {
+    showProgress('4. Starting upload to YouTube...');
+    
+    // NOTE: A real YouTube upload is a multi-step process:
+    // 1. Authenticate the user with OAuth 2.0 to get an access token.
+    // 2. Make an initial POST request to the YouTube API with the metadata (seoData).
+    // 3. Receive a unique upload URL in the response headers.
+    // 4. Make a PUT request to that unique URL with the actual video file content.
+
+    showProgress('  -> Authenticating with YouTube (simulated)...');
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    
+    showProgress('  -> Uploading video file (simulated)...');
+    await new Promise(resolve => setTimeout(resolve, 3000));
+}
